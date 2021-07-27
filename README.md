@@ -3,7 +3,7 @@ Gamingo es un E-Commerce dedicado a la venta de videojuegos físicos para cualqu
 
 Nuestro publico objetivo son adultos jóvenes entre 23 a 35 años de edad que tengan como pasatiempo los videojuegos y estén en búsqueda de adquirir un nuevo videojuego fisico a través de nuestra plataforma.
 
-> Integrantes del Equipo.
+> Integrantes del Equipo:
 
 * Castellanos Irribarren, Yoshemith
 
