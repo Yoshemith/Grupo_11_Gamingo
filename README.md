@@ -3,7 +3,7 @@ Gamingo es un E-Commerce dedicado a la venta de videojuegos físicos para cualqu
 
 Nuestro publico objetivo son adultos jóvenes entre 23 a 35 años de edad que tengan como pasatiempo los videojuegos y estén en búsqueda de adquirir un nuevo videojuego fisico a través de nuestra plataforma.
 
-> Integrantes del Equipo:
+> **Integrantes del Equipo:**
 
 * Castellanos Irribarren, Yoshemith
 
@@ -17,7 +17,7 @@ Tengo 22 años de edad, soy pasante de Ingenieria en Informática @ IPN UPIICSA 
 
 Tengo 26 años de edad, actualmente trabajo como ux/ui designer en una startup fintech, como pasatiempos me gusta jugar videojuegos, ver películas y dibujar.
 
-> Sitios de referencia:
+> **Sitios de referencia:**
 
 * [GameStop](https://www.gamestop.com)
 * [Epicland](https://epicland.com.mx)
