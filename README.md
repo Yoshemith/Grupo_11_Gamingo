@@ -18,3 +18,9 @@ Tengo 22 años de edad, soy pasante de Ingenieria en Informática @ IPN UPIICSA 
 Tengo 26 años de edad, actualmente trabajo como ux/ui designer en una startup fintech, como pasatiempos me gusta jugar videojuegos, ver películas y dibujar.
 
 > Sitios de referencia:
+
+* [GameStop](https://www.gamestop.com)
+* [Epicland](https://epicland.com.mx)
+* [GamePlanet](https://gameplanet.com)
+* [MundoGamer](https://www.mundogamertienda.com)
+* [Gameland](https://gamelandmexico.com)
