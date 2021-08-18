@@ -28,3 +28,7 @@ Tengo 26 años de edad, actualmente trabajo como ux/ui designer en una startup f
 ## Tablero Trello
 
 * [Trello Gamingo](https://trello.com/b/edJF3zp0/grupo-11)
+
+## Wireframes en FIGMA
+
+* [Figma Gamingo](https://www.figma.com/file/z6fQY9APJkqaNWOOtcEOEQ/GAMINGO?node-id=0%3A1)

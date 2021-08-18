@@ -1,0 +1,214 @@
+*{
+    --headerfondo: linear-gradient(180.12deg, #183940 -9.07%, #48172F 99.9%);
+    --verdeagua: #0CF2C9;
+    --bodyfondo: #242626;
+    --formfondo: #323434;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: var(--bodyfondo);
+}
+/* HEADER */
+header{
+    background: var(--headerfondo);
+    width: 100vw;
+    color: white;
+}
+.header{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.mitad1{
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+.mitad2{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    margin-left: 10px;
+    width: 8vw;
+}
+.logo img{
+    width: 100%;
+}
+.linkLogReg a{
+    color: white;
+    text-decoration: none;
+}
+.barra input{
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 94vw;
+}
+.boton-lupa button{
+    background: var(--verdeagua);
+    padding: 5px 3px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    margin-top: 2px;
+    margin-left: -20px;
+}
+.buscador form{
+    display: flex;
+    width: 100%;
+}
+
+/* MAIN */
+main{
+    width: 100vw;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botonesCrearIniciar{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.iniciar{
+    display: flex;
+    justify-content: center;
+    background: var(--formfondo);
+    border-radius: 10px 10px 0 0;
+    width: 47%;
+}
+.iniciar a{
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    text-decoration: none;
+    color: var(--verdeagua)
+}
+.crear{
+    display: flex;
+    justify-content: center;
+    background: #1B2325;
+    border-radius: 10px 10px 0 0;
+    width: 47%;
+}
+.crear a{
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    text-decoration: none;
+    color: #828584;
+}
+.formularios{
+    width: 90%;
+    margin: auto;
+    background: var(--formfondo);
+    color: white;
+    border-radius: 0 0 10px 10px ;
+}
+.formularios form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.input-form{
+    width: 60%;
+    font-size: 16px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.input-form input{
+    height: 30px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.input-form label{
+    padding: 10px 0;
+}
+.input-form button{
+    background: var(--verdeagua);
+    border-radius: 10px;
+    height: 40px;
+    margin: 20px 0;
+}
+.input-form p{
+    font-size: 12px;
+    text-align: center;
+}
+.input-form p a{
+    text-decoration: none;
+    color: #EDB1BD;;
+}
+
+/* FOOTER */
+footer{
+    width: 100vw;
+    background: var(--headerfondo);
+    color:white;
+}
+.footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nosotros{
+    width: 50%;
+    padding: 10px;
+}
+.pago-redes{
+    width: 50%;
+    padding: 10px;
+}
+.pago i{
+    padding: 5px;
+    font-size: 25px;
+}
+.redes i{
+    margin: 5px;
+    padding: 4px;
+    font-size: 20px;
+    background: var(--verdeagua);
+    color: black;
+    border-radius: 100%;
+}
+.suscripcion{
+    width: 100%;
+    padding: 10px;
+}
+.derechos{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+}
+h3{
+    padding: 10px 0 5px 0;
+    font-size: 14px;
+}
+.barra input{
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 94vw;
+}
+.boton-plane button{
+    background: var(--verdeagua);
+    padding: 5px 3px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    margin-top: 2px;
+    margin-left: -20px;
+}
+.registro form{
+    margin: 10px 0;
+    display: flex;
+    width: 100%;
+}
