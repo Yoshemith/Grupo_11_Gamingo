@@ -114,7 +114,13 @@ main{
     color: white;
     border-radius: 0 0 10px 10px ;
 }
-.formularios form{
+.formularios .form1 form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.formularios .form2 form{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -147,7 +153,17 @@ main{
 }
 .input-form p a{
     text-decoration: none;
-    color: #EDB1BD;;
+    color: #EDB1BD;
+}
+.campos p{
+    text-align: left;
+    color: #EDB1BD;
+    font-size: 14px;
+    padding: 10px 0;
+}
+.campos2 p a{
+    text-decoration: none;
+    color: var(--verdeagua);
 }
 
 /* FOOTER */
@@ -182,7 +198,7 @@ footer{
 }
 .suscripcion{
     width: 100%;
-    padding: 10px;
+    padding: 15px;
 }
 .derechos{
     width: 100%;
@@ -197,7 +213,7 @@ h3{
 .barra input{
     border-radius: 5px;
     padding: 5px 10px;
-    width: 94vw;
+    width: 92vw;
 }
 .boton-plane button{
     background: var(--verdeagua);
@@ -208,7 +224,18 @@ h3{
     margin-left: -20px;
 }
 .registro form{
-    margin: 10px 0;
+    margin: 20px 0;
     display: flex;
     width: 100%;
+}
+
+/* RESPONSIVE */
+@media (min-width: 481px){
+
+}
+@media (min-width: 769px){
+    
+}
+@media (min-width: 1280px){
+    
 }

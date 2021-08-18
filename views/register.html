@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
-    <link rel="stylesheet" href="/css/loginRegister.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/register.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 
 </head>
@@ -45,29 +46,46 @@
     <main>
         <div class="botonesCrearIniciar">
             <div class="iniciar">
-                <a href="#">Iniciar sesión</a>
+                <a href="/login">Iniciar sesión</a>
             </div>
             <div class="crear">
-                <a href="#">Crear Cuenta</a>
+                <a href="/register">Crear Cuenta</a>
             </div>
         </div>
-        <div class="formularios">       
-            <form action="/" method="GET">
-                <div class="input-form">
-                    <label for="correo">Correo Electrónico*</label>
-                    <input type="text" name="correo" id="correo" placeholder="tu@correo.com" required>
-                </div>
-                <div class="input-form">
-                    <label for="contraseña">Contraseña*</label>
-                    <input type="text" name="contraseña" id="contraseña" placeholder="Ingresa tu contrasñea" required>
-                </div>
-                <div class="input-form">
-                    <button type="submit">INGRESAR</button>
-                </div>
-                <div class="input-form">
-                    <p>¿Olvidaste tu contraseña? <a href="#"> Recuperar contraseña</a></p>
-                </div>
-            </form>
+        <div class="formularios">      
+            <div class="form2"> 
+                <form action="/" method="GET">
+                    <div class="input-form">
+                        <label for="nombre">Nombre(s)*</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="tu@correo.com" required>
+                    </div>
+                    <div class="input-form">
+                        <label for="apellido">Apellidos*</label>
+                        <input type="text" name="apellido" id="apellido" placeholder="tu@correo.com" required>
+                    </div>
+                    <div class="input-form">
+                        <label for="correo">Correo Electrónico*</label>
+                        <input type="text" name="correo" id="correo" placeholder="tu@correo.com" required>
+                    </div>
+                    <div class="input-form">
+                        <label for="contraseña">Contraseña*</label>
+                        <input type="text" name="contraseña" id="contraseña" placeholder="Ingresa tu contrasñea" required>
+                    </div>
+                    <div class="input-form">
+                        <div class="campos">
+                            <p>*Campos requeridos</p>
+                        </div>
+                    </div>
+                    <div class="input-form">
+                        <div class="campos2">
+                            <p>Al dar click en Crear Cuenta, estás aceptando los <a href="#">Términos y Condiciones de Uso</a> de éste sitio. Adicionalmente estás aceptando nuestro <a href="#">Aviso de Privacidad</a> y recibirás información publicitaria de Gamingo a tu correo electrónico.</p>
+                        </div>
+                    </div>
+                    <div class="input-form">
+                        <button type="submit">CREAR CUENTA</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
     

@@ -17,7 +17,11 @@ app.get('/', (req, res) => {
 })
 
 //LOGIN AND REGISTER
-app.get('/loginRegister', function(req,res){
-    let htmlPath = path.resolve(__dirname, './views/loginRegister.html');
+app.get('/login', function(req,res){
+    let htmlPath = path.resolve(__dirname, './views/login.html');
+    res.sendFile(htmlPath);
+})
+app.get('/register', function(req,res){
+    let htmlPath = path.resolve(__dirname, './views/register.html');
     res.sendFile(htmlPath);
 })
