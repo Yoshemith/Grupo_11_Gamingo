@@ -13,25 +13,38 @@ body{
 /* HEADER */
 header{
     background: var(--headerfondo);
-    width: 100vw;
     color: white;
 }
 .header{
-    padding: 10px;
+    width: 90%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .mitad1{
     display: flex;
-    width: 50%;
+    width: 45%;
     align-items: center;
+    padding: 10px 0 5px 0;
 }
 .mitad2{
     display: flex;
-    width: 50%;
+    width: 45%;
     justify-content: space-around;
     align-items: center;
+    padding: 10px 0 5px 0;
+}
+.shopping-cart{
+    display: flex;
+}
+.shopping-cart a{
+    text-decoration: none;
+    color: white;
+}
+.shopping-cart a p{
+    display: none;
+    padding-left: 5px;
 }
 .logo{
     margin-left: 10px;
@@ -46,8 +59,8 @@ header{
 }
 .barra input{
     border-radius: 5px;
-    padding: 5px 10px;
-    width: 94vw;
+    padding: 5px;
+    width: 90vw;
 }
 .boton-lupa button{
     background: var(--verdeagua);
@@ -58,8 +71,10 @@ header{
     margin-left: -20px;
 }
 .buscador form{
+    padding: 10px 0;
     display: flex;
     width: 100%;
+    margin: auto;
 }
 
 /* MAIN */
@@ -113,6 +128,7 @@ main{
     background: var(--formfondo);
     color: white;
     border-radius: 0 0 10px 10px ;
+    margin-bottom: 40px;
 }
 .formularios .form1 form{
     display: flex;
@@ -165,55 +181,74 @@ main{
     text-decoration: none;
     color: var(--verdeagua);
 }
+.navegador{
+    width: 100%;
+    display: none;
+    margin: auto;
+    padding: 10px 0;
+    background: var(--verdeagua);
+}
+.link-nav{
+    width: 90%;
+    text-align: center;
+}
+.link-nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+}
 
 /* FOOTER */
 footer{
-    width: 100vw;
     background: var(--headerfondo);
     color:white;
 }
 .footer{
+    width: 99%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 .nosotros{
     width: 50%;
-    padding: 10px;
+    padding: 20px;
 }
 .pago-redes{
+    padding: 20px 0 20px 20px;
     width: 50%;
-    padding: 10px;
 }
 .pago i{
     padding: 5px;
-    font-size: 25px;
+    font-size: 30px;
 }
 .redes i{
     margin: 5px;
     padding: 4px;
-    font-size: 20px;
+    font-size: 30px;
     background: var(--verdeagua);
     color: black;
     border-radius: 100%;
 }
 .suscripcion{
     width: 100%;
-    padding: 15px;
+    padding: 20px;
 }
 .derechos{
-    width: 100%;
+    width: 90%;
+    margin: auto;
     text-align: center;
-    padding: 10px;
+    padding: 10px 0;
     font-size: 10px;
 }
 h3{
     padding: 10px 0 5px 0;
     font-size: 14px;
 }
-.barra input{
+.barra2 input{
     border-radius: 5px;
-    padding: 5px 10px;
-    width: 92vw;
+    padding: 5px;
+    width: 85vw;
 }
 .boton-plane button{
     background: var(--verdeagua);
@@ -231,11 +266,111 @@ h3{
 
 /* RESPONSIVE */
 @media (min-width: 481px){
-
+    /* HEADER */
+    .burger-menu{
+        display: none;
+    }
+    .navegador{
+        display: flex;
+        justify-content: space-between;
+    }
+    .mitad1{
+        width: 20%;
+    }
+    .mitad2{
+        order: 2;
+        width: 30%;
+    }
+    .buscador{
+        padding: 0;
+        display: flex;
+        width: 50%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .buscador form{
+        padding-top: 18px;
+    }
+    .barra{
+        width: 85%;
+    }
+    .barra input{
+        width: 100%;
+    }
+    
+    /* MAIN */
+    .botonesCrearIniciar{
+        width: 70%;
+    }
+    .formularios{
+        width: 70%;
+    }
+    /* FOOTER */
+    .nosotros{
+        width: 50%;
+    }
+    .pago i{
+        padding: 10px;
+    }
+    .redes i{
+        margin: 5px 15px;
+    }
+    .suscripcion{
+        width: 70%;
+    }
+    .barra2{
+        width: 90%;
+    }
+    .barra2 input{
+        width: 100%;
+    }
 }
 @media (min-width: 769px){
-    
+    /* HEADER */
+    .logo img{
+        width: 85%;
+    }
+    .shopping-cart a{
+        display: flex;
+        width: 100%;
+    }
+    .shopping-cart a p{
+        display: flex;
+    }
+    .link-nav{
+        font-size: 18px;
+    }
+    /* MAIN */
+    .botonesCrearIniciar{
+        width: 40%;
+    }
+    .formularios{
+        width: 40%;
+    }
+    /* FOOTER */
+
+    .nosotros{
+        width: 25%;
+    }
+    .pago-redes{
+        width: 30%;
+    }
+    .suscripcion{
+        width: 25%;
+    }
 }
 @media (min-width: 1280px){
-    
+    /* HEADER */
+    .logo img{
+        width: 75%;
+    }
+    /* MAIN */
+    .botonesCrearIniciar{
+        width: 30%;
+    }
+    .formularios{
+        width: 30%;
+    }
+    /* FOOTER */
+
 }
