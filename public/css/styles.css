@@ -125,11 +125,10 @@ main{
     justify-content: space-between;
     height: 50px;
     padding-top: 20px;
+    font-size: 18px; 
 }
-.tags h4{
-    /* border: solid 1px blue; */
-    width: 200px;
-    font-size: 18px;
+.tag-title{
+    width: 300px; 
 }
 .ver-mas{
     display: flex;
