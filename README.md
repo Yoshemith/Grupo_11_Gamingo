@@ -5,17 +5,21 @@ Nuestro publico objetivo son adultos jóvenes entre 23 a 35 años de edad que te
 
 ## Integrantes del Equipo
 
-* Castellanos Irribarren, Yoshemith
+* **Castellanos Irribarren, Yoshemith**
 
 Hola, tengo 22 años y soy estudiante del Instituto Tecnológico de Puebla, mis hobbies son leer, ver peliculas, aprender nuevas habilidades y ver atardeceres.
 
-* Gómez Montes de Oca, Christian Alejandro
+* **Gómez Montes de Oca, Christian Alejandro**
 
 Tengo 22 años de edad, soy pasante de Ingenieria en Informática @ IPN UPIICSA y en mis tiempos libres práctico baloncesto y juego vídeojuegos.
 
-* López Orozco, Karla Denise
+* **López Orozco, Karla Denise**
 
 Tengo 26 años de edad, actualmente trabajo como ux/ui designer en una startup fintech, como pasatiempos me gusta jugar videojuegos, ver películas y dibujar.
+
+## Mockups en FIGMA
+
+* [Figma Gamingo](https://www.figma.com/file/z6fQY9APJkqaNWOOtcEOEQ/GAMINGO?node-id=0%3A1)
 
 ## Sitios de referencia
 
@@ -28,7 +32,3 @@ Tengo 26 años de edad, actualmente trabajo como ux/ui designer en una startup f
 ## Tablero Trello
 
 * [Trello Gamingo](https://trello.com/b/edJF3zp0/grupo-11)
-
-## Wireframes en FIGMA
-
-* [Figma Gamingo](https://www.figma.com/file/z6fQY9APJkqaNWOOtcEOEQ/GAMINGO?node-id=0%3A1)
