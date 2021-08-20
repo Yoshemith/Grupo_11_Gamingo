@@ -4,9 +4,389 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
+    <title>Gamingo</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>INDEX.HTML</h1>
+    <header class="main-header">
+        <div class="top-header">
+            <div class="burger-logo">
+                <div class="burger-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="logo">
+                    <img src="/img/GG_logo.svg" alt="logo">
+                </div>
+            </div>
+            <div class="login-register">
+                <div class="login-ref">
+                    <a href="./login">Ingresar/Registrarse</a>
+                </div>
+                <div class="shopping-cart">
+                    <a href="#"><i class="fas fa-shopping-cart"></i><p>Carrito</p></a>
+                </div>
+            </div>
+            <div class="search-container">
+                <form action="/" method="GET">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Buscar...">
+                    </div>
+                    <div class="search-button">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="bottom-header">
+            <div class="link-nav">
+                <a href="/">INICIO</a>
+            </div>
+            <div class="link-nav">
+                <a href="/index">SWITCH</a>
+            </div>
+            <div class="link-nav">
+                <a href="/index">XBOX ONE</a>
+            </div>
+            <div class="link-nav">
+                <a href="/index">XBOX 360</a>
+            </div>
+            <div class="link-nav">
+                <a href="/index">PS5</a>
+            </div>
+            <div class="link-nav">
+                <a href="/index">PS4</a>
+            </div>
+        </div>
+    </header> 
+    <section class="banner-section">
+        <div class="banner-container">
+            <img src="/img/banner.png" alt="Banner de oferta">
+        </div>
+    </section>
+    <main>
+        <section class="best-sellers">
+            <div class="tags">
+                <h4 class="tag-title">Lo mas vendido</h4>
+                <h4 class="ver-mas">Ver mas...</h4>
+            </div>
+            <div class="products">
+                <article>
+                    <img src="/img/item-1.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 1,200</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-2.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 2,300</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-3.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-1.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 1,200</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-2.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 2,300</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-3.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="newest-products">
+            <div class="tags">
+                <h4 class="tag-title">Lo mas vendido</h4>
+                <h4 class="ver-mas">Ver mas...</h4>
+            </div>
+            <div class="products">
+                <article>
+                    <img src="/img/item-1.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 1,200</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-2.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 2,300</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-3.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-1.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 1,200</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-2.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 2,300</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-3.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="catalogue">
+            <div class="tags">
+                <h4 class="tag-title">Catalogo</h4>
+                <h4 class="ver-mas">Ver mas...</h4>
+            </div>
+            <div class="products">
+                <article>
+                    <img src="/img/item-1.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 1,200</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-2.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 2,300</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-3.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-1.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 1,200</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-2.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 2,300</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-3.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Nombre del producto</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="about-us">
+                <h3>¿QUIÉNES SOMOS?</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae ipsa at ad fuga esse reiciendis mollitia libero optio saepe nulla. Veniam dolorem, ex quos nisi dicta doloremque fugiat nemo veritatis neque velit, obcaecati qui accusantium recusandae omnis iste? Mollitia, sapiente.</p>
+            </div>
+            <div class="payments-socials">
+                <div class="payments">
+                    <h3>MÉTODOS DE PAGO</h3>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-google-pay"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-amex"></i>
+                </div>
+                <div class="socials">
+                    <h3>REDES SOCIALES</h3>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+            </div>
+            <div class="subscription">
+                <h3>¡SUSCRÍBETE Y ENTÉRATE ANTES QUE TODOS!</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci quaerat!</p>
+                <div class="bottom-register">
+                    <form action="/" method="GET">
+                        <div class="register-bar">
+                            <input type="text" placeholder="Registra tu correo electrónico">
+                        </div>
+                        <div class="register-button">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright 2021 © Gamingo. Todos los Derechos Reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

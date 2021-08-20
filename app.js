@@ -16,6 +16,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve('./views/index.html'));
 })
 
+//SHOP_CART
+app.get('/carrito', (req, res) => {
+    res.sendFile(path.resolve('./views/shop_cart.html'));
+})
+
 //LOGIN AND REGISTER
 app.get('/login', function(req,res){
     let htmlPath = path.resolve(__dirname, './views/login.html');
