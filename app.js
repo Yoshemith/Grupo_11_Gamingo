@@ -1,38 +1,16 @@
 const express = require('express');
-const path = require('path');
 const app = express();
+
+const path = require('path');
 const publicPath = path.resolve(__dirname, "./public");
-
 app.use(express.static(publicPath));
+
+//requerir rutas
+const rutas = require('./routers/main');
+app.use('/', rutas);
+
+//Puerto default o 3000
+let port = process.env.PORT || 3030;
+
 //Levantando el servidor
-app.listen(3030,() => console.log('Server running at port 3030'));
-
-/*
- ** RUTAS A LOS RECURSOS **
-*/
-
-//HOME
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve('./views/index.html'));
-})
-
-//SHOP_CART
-app.get('/carrito', (req, res) => {
-    res.sendFile(path.resolve('./views/shop_cart.html'));
-})
-
-//LOGIN AND REGISTER
-app.get('/login', function(req,res){
-    let htmlPath = path.resolve(__dirname, './views/login.html');
-    res.sendFile(htmlPath);
-})
-app.get('/register', function(req,res){
-    let htmlPath = path.resolve(__dirname, './views/register.html');
-    res.sendFile(htmlPath);
-})
-
-//PRODUCT DETAIL
-app.get('/productDetail', function(req,res){
-    let htmlPath = path.resolve(__dirname, './views/productDetail.html');
-    res.sendFile(htmlPath);
-});
+app.listen(port, () => console.log('Server running at port 3030'));
