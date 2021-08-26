@@ -9,8 +9,12 @@ app.use(express.static(publicPath));
 const rutas = require('./routers/main');
 app.use('/', rutas);
 
+//Confifiguracion EJS como template engine
+app.set('view engine', 'ejs');
+
 //Puerto default o 3000
 let port = process.env.PORT || 3030;
 
 //Levantando el servidor
 app.listen(port, () => console.log('Server running at port 3030'));
+

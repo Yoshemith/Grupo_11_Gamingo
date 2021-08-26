@@ -7,6 +7,7 @@ const path = require('path');
 const controlador = {
     home: (req, res) => {
         res.sendFile(path.resolve('./views/index.html'));
+        //res.render('index') //Renderizacion con ejs 
     },
     carrito: (req, res) => {
         res.sendFile(path.resolve('./views/shop_cart.html'));
