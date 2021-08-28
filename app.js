@@ -6,8 +6,11 @@ const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
 
 //requerir rutas
-const rutas = require('./routers/main');
-app.use('/', rutas);
+const rutasMain = require('./routers/main');
+app.use(rutasMain);
+
+const rutasUsers = require('./routers/users');
+app.use(rutasUsers);
 
 //Confifiguracion EJS como template engine
 app.set('view engine', 'ejs');
