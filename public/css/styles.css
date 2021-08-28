@@ -240,6 +240,7 @@ h3{
     .shopping-cart a{
         display: flex;
         width: 100%;
+        align-items: baseline;
     }
     .shopping-cart a p{
         display: flex;

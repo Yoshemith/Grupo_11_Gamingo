@@ -15,11 +15,12 @@
     border-radius: 20px;
 }
 /* MAIN */
-main{
+/* main{
     padding: 10px;
     background-color: var(--bodyfondo);
     color: white;
-}
+} */
+
 .tags-shop{
     display: none;
 }
