@@ -6,11 +6,12 @@ const path = require('path');
 */
 const controlador = {
     home: (req, res) => {
-        res.sendFile(path.resolve('./views/index.html'));
-        //res.render('index') //Renderizacion con ejs 
+        //res.sendFile(path.resolve('./views/index.html'));
+        res.render('index'); //Renderizacion con ejs 
     },
-    carrito: (req, res) => {
-        res.sendFile(path.resolve('./views/shop_cart.html'));
+    shopping_cart: (req, res) => {
+        //res.sendFile(path.resolve('./views/shop_cart.html'));
+        res.render('shopping_cart');
     },
     productDetails: (req, res) => {
         let htmlPath = path.resolve('./views/productDetail.html');

@@ -8,6 +8,7 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+
 /* HEADER */
 header{
     background: var(--headerfondo);
@@ -19,6 +20,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 4px;
 }
 .burger-logo{
     display: flex;
@@ -86,7 +88,7 @@ header{
     width: 100%;
     display: none;
     margin: auto;
-    padding: 10px 0;
+    padding: 5px 0;
     background: var(--verdeagua);
 }
 .link-nav{
@@ -97,90 +99,8 @@ header{
     text-decoration: none;
     color: black;
     font-weight: bold;
-}
-/* BANNERS */
-.banner-section{
-    width: 100%;
-    margin: auto;
-    background-color: var(--bodyfondo);
-}
-.banner-container{
-    padding: 25px 0px;
-    width: 90%;
-    margin: auto;
-}
-.banner-container img{
-    width: 100%;
-    border-radius: 20px;
-}
-/* MAIN */
-main{
-    padding: 10px;
-    background-color: var(--bodyfondo);
-    color: white;
-}
-.tags{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 50px;
-    padding-top: 20px;
-    font-size: 18px; 
-}
-.tag-title{
-    width: 300px; 
-}
-.ver-mas{
-    display: flex;
-    justify-content: flex-end;
-    color: #C77C91;
-}
-.products{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-main section article{
-    background-color: var(--formfondo);
-    border-radius: 20px;
-    margin-bottom: 10px;
-    padding: 8px;
-    transition: box-shadow 450ms;
-    width: 32%;
-    height: 35%;
-    position: relative;
-    /* border: solid 1px yellow; */
-}
-.products article img{
-    width: 100%;
-    height: 60%;
-    border-radius: 10px;
-}
-.main-article{
-    text-align: center;
     font-size: 14px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    /* display: flex;
-    flex-direction: column;
-    align-content: stretch;
-    border: solid 1px yellow; */
 }
-.description{
-    padding-bottom: 5px;
-}
-.price{
-    padding-bottom: 5px;
-}
-.rating{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.checked {
-    color: orange;
-  }
 
 /* FOOTER */
 footer{
@@ -193,23 +113,19 @@ footer{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-h3{
-    padding: 10px 0 5px 0;
-    font-size: 14px;
-}
-.about-us{
+.nosotros{
     width: 50%;
     padding: 20px;
 }
-.payments-socials{
+.pago-redes{
     padding: 20px 0 20px 20px;
     width: 50%;
 }
-.payments i{
+.pago i{
     padding: 5px;
     font-size: 30px;
 }
-.socials i{
+.redes i{
     margin: 5px;
     padding: 4px;
     font-size: 30px;
@@ -217,21 +133,27 @@ h3{
     color: black;
     border-radius: 100%;
 }
-.subscription{
+.suscripcion{
     width: 100%;
     padding: 20px;
 }
-.bottom-register form{
-    margin: 20px 0;
-    display: flex;
-    width: 100%;
+.derechos{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 10px;
 }
-.register-bar input{
+h3{
+    padding: 10px 0 5px 0;
+    font-size: 14px;
+}
+.barra2 input{
     border-radius: 5px;
     padding: 5px;
     width: 85vw;
 }
-.register-button button{
+.boton-plane button{
     background: var(--verdeagua);
     padding: 5px 3px;
     border-radius: 0 5px 5px 0;
@@ -239,13 +161,12 @@ h3{
     margin-top: 2px;
     margin-left: -20px;
 }
-.copyright{
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 10px;
+.registro form{
+    margin: 20px 0;
+    display: flex;
+    width: 100%;
 }
+
 @media (min-width: 481px){
     /* HEADER */
     .burger-logo{
@@ -291,46 +212,30 @@ h3{
         display: flex;
         justify-content: space-between;
     }
-    /* BANNERS */
-    .banner-container{
-        padding: 15px 0px;
-        width: 75%;
-    }
-    .banner-container img{
-        height: 220px;
-    }
-    /* MAIN */ 
-    main{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    main section article{
-        width: 26%;
-    }
     /* FOOTER */
-    .about-us{
+    .nosotros{
         width: 50%;
     }
-    .payments i{
+    .pago i{
         padding: 10px;
     }
-    .socials i{
+    .redes i{
         margin: 5px 15px;
     }
-    .subscription{
+    .suscripcion{
         width: 70%;
     }
-    .register-bar{
+    .barra2{
         width: 90%;
     }
-    .register-bar input{
+    .barra2 input{
         width: 100%;
     }
 }
 @media (min-width: 769px){
     /* HEADER */
     .logo img{
-        width: 85%;
+        width: 72%;
     }
     .shopping-cart a{
         display: flex;
@@ -342,47 +247,24 @@ h3{
     .bottom-header{
         height: 10%;
     }
-    /* BANNERS */
-    .banner-container{
-        padding: 0px 0px;
-        width: 60%;
-    }
-    .banner-container img{
-        height: 250px;
-    }
-    /* MAIN */ 
-    main{
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-    main section article{
-        width: 16%;
+    .link-nav a{
+        font-size: 16px;
     }
     /* FOOTER */
-    .about-us{
+    .nosotros{
         width: 25%;
     }
-    .payments-socials{
+    .pago-redes{
         width: 30%;
     }
-    .subscription{
+    .suscripcion{
         width: 25%;
     }
+
 }
 @media (min-width: 1280px){
     /* HEADER */
     .logo img{
-        width: 80%;
-    }
-    /* BANNERS */
-    .banner-container{
-        width: 45%;
-    }
-    .banner-container img{
-        height: 230px;
-    }
-    /* MAIN */ 
-    main section article{
-        width: 14%;
+        width: 60%;
     }
 }
