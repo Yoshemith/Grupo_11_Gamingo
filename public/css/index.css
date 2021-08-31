@@ -16,8 +16,9 @@
 }
 
 /* MAIN */
-main{
-    padding: 10px;
+.main-index{
+    margin-bottom: 40px;
+    padding: 0px 15px;
     background-color: var(--bodyfondo);
     color: white;
 }
@@ -30,9 +31,10 @@ main{
     font-size: 18px; 
 }
 .tag-title{
-    width: 300px; 
+    width: 270px; 
 }
 .ver-mas{
+    width: 100px;
     display: flex;
     justify-content: flex-end;
     color: #C77C91;
@@ -43,7 +45,7 @@ main{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-main section article{
+.main-index section article{
     background-color: var(--formfondo);
     border-radius: 20px;
     margin-bottom: 10px;
@@ -52,7 +54,7 @@ main section article{
     width: 32%;
     height: 35%;
     position: relative;
-    /* border: solid 1px yellow; */
+    /* border: solid 1px var(--verdeagua); */
 }
 .products article img{
     width: 100%;
@@ -161,11 +163,10 @@ h3{
         height: 220px;
     }
     /* MAIN */ 
-    main{
-        padding-left: 20px;
-        padding-right: 20px;
+    .main-index{
+        padding: 0px 20px;
     }
-    main section article{
+    .main-index section article{
         width: 26%;
     }
     /* FOOTER */
@@ -199,11 +200,10 @@ h3{
         height: 250px;
     }
     /* MAIN */ 
-    main{
-        padding-left: 25px;
-        padding-right: 25px;
+    .main-index{
+        padding: 0px 30px;
     }
-    main section article{
+    .main-index section article{
         width: 16%;
     }
     /* FOOTER */
@@ -226,7 +226,10 @@ h3{
         height: 230px;
     }
     /* MAIN */ 
-    main section article{
+    .main-index{
+        padding: 0px 35px;
+    }
+    .main-index section article{
         width: 14%;
     }
 }
