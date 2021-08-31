@@ -108,13 +108,7 @@ form.create-form{
     }
     .create-button button{
         width: 70%;
-    } 
-    /* .create-form{
-        margin: auto;
-        background-color: #ebebeb;
-        border: solid 2px #323434;;
-        border-radius: 10px;
-    } */    
+    }    
 }
 @media (min-width: 769px) { 
     .create-form{
