@@ -79,6 +79,7 @@ header{
     padding: 5px;
     width: 90vw;
 }
+
 .search-button button{
     background: var(--verdeagua);
     padding: 5px 3px;

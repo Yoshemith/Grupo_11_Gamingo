@@ -10,7 +10,7 @@ const controlador = {
         res.render('index'); //Renderizacion con ejs 
     },
     shopping_cart: (req, res) => {
-        res.render('shopping_cart');
+        res.render('shoppingCart');
     },
     productDetails: (req, res) => {
         let htmlPath = path.resolve('./views/productDetail.html');
