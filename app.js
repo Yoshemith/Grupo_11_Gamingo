@@ -12,6 +12,9 @@ app.use(rutasMain);
 const rutasUsers = require('./routers/users');
 app.use(rutasUsers);
 
+const rutasProducts = require('./routers/products');
+app.use(rutasProducts);
+
 //Confifiguracion EJS como template engine
 app.set('view engine', 'ejs');
 
