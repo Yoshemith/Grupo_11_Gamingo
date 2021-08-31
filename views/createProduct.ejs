@@ -4,20 +4,44 @@
 <body>
     <%- include('./partials/header.ejs') %>
 <main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p>AQUI VA LA CREACION DEL PRODUCTO</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <div class="titulo-create">
+        <h2>Agregar nuevo producto</h2>
+    </div>
+    <form action="/" method="post" class="create-form">
+        <div class="control-form" >
+            <label for="nombreProducto">Nombre del producto</label>
+            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Ingresa nombre del producto" minlength="5" class="control" required>
+        </div>
+        <div class="control-form">
+            <label for="categoria">Categoria</label>
+            <select name="categoria" id="categoria" aria-placeholder="-Selecciona categoria-">
+                <option value="switch">SWITCH</option>
+                <option value="xbox-one">XBOX ONE</option>
+                <option value="xbox-360">XBOX 360</option>
+                <option value="ps5">PS5</option>
+                <option value="ps4">PS4</option>
+            </select>
+
+        </div>
+        <div class="control-form">
+            <label for="precio">Precio</label>
+            <input type="number" name="precio" id="precio" placeholder="Ingresa una cantidad" class="control" required>
+        </div>
+        <div class="control-form">
+            <label for="descripcion">Descripcion</label>
+            <textarea name="descripcion" id="descripcion" cols="20" rows="6" placeholder="Escriba una descripcion del producto" required></textarea>
+        </div>
+        <div class="control-form">
+            <label for="imagen">Imagen del producto</label>
+
+        </div>
+        <div class="control-form">
+            <div class="botones">
+                <button type="submit" onclick="">CREAR NUEVO PRODUCTO</button>
+                <button type="reset" onclick="">CANCELAR</button>
+            </div>
+        </div>
+    </form>
 </main>
 
 <%- include('./partials/footer.ejs') %>
