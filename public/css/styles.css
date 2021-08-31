@@ -8,6 +8,9 @@
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    background-color: var(--bodyfondo);
+}
 
 /* HEADER */
 header{

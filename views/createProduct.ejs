@@ -3,7 +3,7 @@
     <%- include('./partials/head.ejs') %>
 <body>
     <%- include('./partials/header.ejs') %>
-<main>
+<main class="create-product-main">
     <div class="titulo-create">
         <h2>Agregar nuevo producto</h2>
     </div>
@@ -33,14 +33,17 @@
         </div>
         <div class="control-form">
             <label for="imagen">Imagen del producto</label>
-
+            <input type="file" name="imagen" id="imagen" placeholder="Ingresa una Imagen" class="control" >
         </div>
-        <div class="control-form">
-            <div class="botones">
-                <button type="submit" onclick="">CREAR NUEVO PRODUCTO</button>
-                <button type="reset" onclick="">CANCELAR</button>
+        <div class="control-buttons">
+            <div class="create-button">
+                <button type="submit">CREAR NUEVO PRODUCTO</button>
+            </div>
+            <div class="cancel-button">
+                <button type="reset">CANCELAR</button>
             </div>
         </div>
+
     </form>
 </main>
 
