@@ -87,12 +87,14 @@ header{
 .bottom-header{
     width: 100%;
     display: none;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: auto;
     padding: 5px 0;
     background: var(--verdeagua);
 }
 .link-nav{
-    width: 90%;
+    width: 30%;
     text-align: center;
 }
 .link-nav a{
@@ -211,6 +213,7 @@ h3{
     .bottom-header{
         display: flex;
         justify-content: space-between;
+        flex-wrap: nowrap;
     }
     /* FOOTER */
     .nosotros{

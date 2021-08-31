@@ -1,71 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-
-    <link rel="stylesheet" href="/css/login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-</head>
+    <%- include('./partials/head.ejs') %>
 <body>
-    <header>
-        <div class="header">
-            <div class="mitad1">
-                <div class="burger-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <div class="logo">
-                    <img src="/img/GG_logo.svg" alt="logo">
-                </div>
-            </div>
-            <div class="mitad2">
-                <div class="linkLogReg">
-                    <a href="./login">Ingresar/Registrarse</a>
-                </div>
-                <div class="shopping-cart">
-                    <a href="/carrito"><i class="fas fa-shopping-cart"></i><p>Carrito</p></a>
-                </div>
-            </div>
-            <div class="buscador">
-                <form action="/" method="GET">
-                    <div class="barra">
-                        <input type="text" placeholder="Buscar...">
-                    </div>
-                    <div class="boton-lupa">
-                        <button type="submit"><i class="fas fa-search"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <nav class="navegador">
-            <div class="link-nav">
-                <a href="/">INICIO</a>
-            </div>
-            <div class="link-nav">
-                <a href="/index">SWITCH</a>
-            </div>
-            <div class="link-nav">
-                <a href="/index">XBOX ONE</a>
-            </div>
-            <div class="link-nav">
-                <a href="/index">XBOX 360</a>
-            </div>
-            <div class="link-nav">
-                <a href="/index">PS5</a>
-            </div>
-            <div class="link-nav">
-                <a href="/index">PS4</a>
-            </div>
-        </nav>
-    </header>
+    <%- include('./partials/header.ejs') %>
 
     <main>
         <div class="botonesCrearIniciar">
@@ -85,7 +22,13 @@
                     </div>
                     <div class="input-form">
                         <label for="contraseña">Contraseña*</label>
-                        <input type="text" name="contraseña" id="contraseña" placeholder="Ingresa tu contrasñea" required>
+                        <input type="password" name="contraseña" id="contraseña" placeholder="Ingresa tu contrasñea" required>
+                        <div class="eye" id="iconPass">
+                            <i class="fas fa-eye" onclick="funcionContraseña()"></i>
+                        </div>
+                        <div class="eye2" id="iconPass2">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
                     </div>
                     <div class="input-form">
                         <button type="submit">INGRESAR</button>
@@ -98,5 +41,6 @@
         </div>
     </main>
     <%- include('./partials/footer.ejs') %>
+    <script src="/js/pass.js" type="text/javascript"></script>
 </body>
 </html>

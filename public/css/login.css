@@ -14,7 +14,7 @@ html {
 body{
     background: var(--bodyfondo);
 }
-/* HEADER */
+/* HEADER
 header{
     background: var(--headerfondo);
     color: white;
@@ -41,6 +41,7 @@ header{
 }
 .shopping-cart{
     display: flex;
+    margin-left: 10px;
 }
 .shopping-cart a{
     text-decoration: none;
@@ -52,7 +53,7 @@ header{
 }
 .logo{
     margin-left: 10px;
-    width: 8vw;
+    width: 12vw;
 }
 .logo img{
     width: 100%;
@@ -80,7 +81,7 @@ header{
     width: 100%;
     margin: auto;
 }
-
+*/
 /* MAIN */
 main{
     margin: 40px 0;
@@ -151,6 +152,7 @@ main{
     margin: auto;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .input-form input{
     height: 30px;
@@ -191,6 +193,7 @@ main{
     padding: 10px 0;
     background: var(--verdeagua);
 }
+/*
 .link-nav{
     width: 90%;
     text-align: center;
@@ -201,8 +204,42 @@ main{
     font-weight: bold;
     font-size: 12px;
 }
+*/
+.eye{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.eye i{
+    display: flex;
+    position: absolute;
+    color: gray;
+    top: 45px;
+    right: 7px;
+    font-size: 20px;
+    transition: .5s;
+}
+.eye i:hover{
+    color: #242626;
+}
+.eye2 {
+    display: none;
+    flex-direction: row-reverse;
+}
+.eye2 i{
+    display: flex;
+    position: absolute;
+    color: gray;
+    top: 45px;
+    right: 7px;
+    font-size: 20px;
+    transition: .5s;
+}
+.eye2 i:hover{
+    color: #242626;
+}
 
-/* FOOTER */
+
+/* FOOTER 
 footer{
     background: var(--headerfondo);
     color:white;
@@ -266,10 +303,11 @@ h3{
     display: flex;
     width: 100%;
 }
+*/
 
 /* RESPONSIVE */
 @media (min-width: 481px){
-    /* HEADER */
+    /* HEADER 
     .burger-menu{
         display: none;
     }
@@ -300,6 +338,7 @@ h3{
     .barra input{
         width: 100%;
     }
+    */
     
     /* MAIN */
     .botonesCrearIniciar{
@@ -308,7 +347,7 @@ h3{
     .formularios{
         width: 70%;
     }
-    /* FOOTER */
+    /* FOOTER 
     .nosotros{
         width: 50%;
     }
@@ -327,9 +366,10 @@ h3{
     .barra2 input{
         width: 100%;
     }
+    */
 }
 @media (min-width: 769px){
-    /* HEADER */
+    /* HEADER 
     .logo img{
         width: 85%;
     }
@@ -343,6 +383,7 @@ h3{
     .link-nav{
         font-size: 18px;
     }
+    */
     /* MAIN */
     .botonesCrearIniciar{
         width: 40%;
@@ -350,7 +391,7 @@ h3{
     .formularios{
         width: 40%;
     }
-    /* FOOTER */
+    /* FOOTER 
 
     .nosotros{
         width: 25%;
@@ -361,12 +402,14 @@ h3{
     .suscripcion{
         width: 25%;
     }
+    */
 }
 @media (min-width: 1280px){
-    /* HEADER */
+    /* HEADER 
     .logo img{
         width: 75%;
     }
+    */
     /* MAIN */
     .botonesCrearIniciar{
         width: 30%;
