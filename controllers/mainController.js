@@ -12,8 +12,7 @@ const controlador = {
         res.render('shoppingCart');
     },
     productDetails: (req, res) => {
-        let htmlPath = path.resolve('./views/productDetail.html');
-        res.sendFile(htmlPath);
+        res.render('productDetail');
     }
 };
 
