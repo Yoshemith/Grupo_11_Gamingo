@@ -1,8 +1,4 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
+
 body {
     color: white;
 }
@@ -25,20 +21,7 @@ div.imagen-juego {
 .main-navbar {
     display: none;
 }
-header {
-    background: linear-gradient(180.12deg, #183940 -9.07%, #48172F 99.9%);
-    display: flex;
-    flex-wrap: wrap;
-    padding: 16px;
-}
-header a {
-    text-decoration: none;
-    color: #F2F4F4;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 22px;
-}
+
 .form-busqueda {
     width: 100vw;
     order: 1;
@@ -189,10 +172,6 @@ section.detalles-producto {
 article.nombre-producto-consola {
     padding-left: 32px;
     padding-right: 32px;
-}
-main {
-    width: 95%;
-    margin: auto;
 }
 
 
