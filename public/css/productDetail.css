@@ -3,15 +3,21 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
-html {
-    font-family: 'Inter', sans-serif;
+body {
+    color: white;
 }
 
-body{
-    background-color: #262C2C;
-    color: #F2F4F4;
+div.imagen-juego {
+    width: 201px;
+    height: 253px;
+    border-radius: 5px;
+    background: url(/img/71rgZ3t0LcL._SL1000_.jpg);
+    background-size: contain;
+    margin: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
+
 
 .logo-1 {
     display: none;
@@ -157,49 +163,7 @@ a.mas {
     align-items: center;
     justify-content: space-between;
 }
-div.imagen-juego {
-    width: 201px;
-    height: 253px;
-    border-radius: 5px;
-    background: url(/img/71rgZ3t0LcL._SL1000_.jpg);
-    background-size: contain;
-    margin: auto;
-    margin-top: 32px;
-    margin-bottom: 32px;
-}
-div.juego1 {
-    width: 98px;
-    height: 130px;
-    margin: auto;
-    background: url(/img/71rgZ3t0LcL._SL1000_.jpg);
-    background-size: contain;
-    border-radius: 5px;
-}
-div.juego2 {
-    width: 98px;
-    height: 130px;
-    margin: auto;
-    background: url(/img/image.jpg);
-    background-size: 100% 100%;
-    border-radius: 5px;
-}
-div.juego3 {
-    width: 98px;
-    height: 130px;
-    margin: auto;
-    background: url(/img/73811bbb01e6fa714b10f080217073f7.jpg);
-    background-size: contain;
-    border-radius: 5px;
-}
 
-div.juego4 {
-    width: 98px;
-    height: 130px;
-    margin: auto;
-    background: url(/img/image-2.jpg);
-    background-size: contain;
-    border-radius: 5px;
-}
 a.mas{
     font-size: 16px;
 }
@@ -218,13 +182,7 @@ article.otros {
     flex-grow: 0.33;
     margin: 16px;
 }
-.acomodo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 8px;
-    margin-bottom: 32px;
-}
+
 section.detalles-producto {
     display: block;
 }
@@ -252,10 +210,6 @@ button {
 }
 
 
-footer {
-    background: linear-gradient(180.12deg, #183940 -9.07%, #48172F 99.9%);
-}
-
 @media (min-width: 481px){
 
     
@@ -263,57 +217,8 @@ footer {
 
 @media (min-width: 769px){
 
-    div.juego1 {
-        width: 203px;
-        height: 256px;
-        margin: auto;
-        background: url(/img/71rgZ3t0LcL._SL1000_.jpg);
-        background-size: contain;
-        border-radius: 5px;
-    }
-    div.juego2 {
-        width: 203px;
-        height: 256px;
-        margin: auto;
-        background: url(/img/image.jpg);
-        background-size: 100% 100%;
-        border-radius: 5px;
-    }
-    div.juego3 {
-        width: 203px;
-        height: 256px;
-        margin: auto;
-        background: url(/img/73811bbb01e6fa714b10f080217073f7.jpg);
-        background-size: contain;
-        border-radius: 5px;
-    }
-
-    div.juego4 {
-        width: 203px;
-        height: 256px;
-        margin: auto;
-        background: url(/img/image1.jpg);
-        background-size: 100% 100%;
-        border-radius: 5px;
-    }
-
-    article.otros {
-       
-    }
     
-    .acomodo {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 8px;
-        margin-bottom: 32px;
-    }
-    div.imagen-juego {
-        width: 428px;
-        height: 540px;
-        margin-left: 32px;
-        background-size: cover;
-    }
+    
     section.detalles-producto {
         display: flex;
         justify-content: space-between;
