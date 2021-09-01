@@ -83,7 +83,7 @@ header{
 }
 */
 /* MAIN */
-main{
+.main-login{
     margin: 40px 0;
     display: flex;
     flex-direction: column;
