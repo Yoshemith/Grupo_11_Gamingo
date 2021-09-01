@@ -1,6 +1,5 @@
 //Requerir path
 const path = require('path');
-
 /*
  ** RUTAS A LOS RECURSOS **
 */
