@@ -1,4 +1,28 @@
 
+.profile-nametype{
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+}
+.profile-name{
+    display: flex;
+    justify-content: flex-end;
+}
+.profile-type{
+    display: flex;
+    justify-content: flex-end;
+}
+.profile-divs{
+    width: 50%;
+}
+.profile-photo{
+    margin: 0 15px;
+    width: 10%;
+}
+.profile-photo img{
+    width: 100%;
+}
+
 main.create-product-main{
     margin-top: 20px;
     margin-bottom: 40px;
@@ -20,20 +44,21 @@ form.create-form{
     /* margin-left: 20px;
     margin-right: 20px; */
 }
-
 .titulo-create{
     font-size: 12px;
-    padding: 8px 0 0 20px;
+    padding: 8px 0px 0px 20px;
     color: white;
 }
-
+.titulo-create h2{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
 .control-form{
     
     margin-bottom: 15px;
     width: 100%;
     /* border: solid 10px green; */
 }  
-
 .control-form label {
     color: white;
     margin-bottom: 10px;
@@ -76,6 +101,65 @@ form.create-form{
     height: 40px;
 }
 
+.control-form-container{
+    /* align-items: center;
+    align-content: center; */
+    width: 100%;
+}
+.control-form-container label{
+    color: white;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.container{
+    width: 100%;
+    background-color: var(--formfondo);
+    border-radius: 20px;
+    border: 2px dashed #e0eafc;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.drag-area{
+    height: 200px; /* 300 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto;
+}
+.drag-area .drag-icon{
+    font-size: 40px; /* 50 */
+    color: #F2F4F4;
+}
+
+.drag-area .drag-header{
+    font-size: 15px; /*20px */
+    font-weight: 500;
+    color: #F2F4F4;
+}
+.drag-area .drag-support{
+    font-size: 10px; /* 12px */
+    color: gray;
+    margin:  10px 0 15px 0;
+}
+.drag-area .browse-button{
+    font-size: 15px; /* 20px */
+    font-weight: 500;
+    color: var(--verdeagua);
+    cursor: pointer;
+}
+.container.active{
+    border: 2px solid var(--verdeagua);
+}
+.container img {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
 .control-buttons{
     /* border: solid 1px yellow; */
     text-align: center;
@@ -88,7 +172,7 @@ form.create-form{
     border-radius: 15px ;
     font-weight: bold;
     font-size: 20px;
-    background-color: #0CF2C9;
+    background-color: var(--verdeagua);
 }
 .cancel-button button{
     /* border: solid 1px blue; */
