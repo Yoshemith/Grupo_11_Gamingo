@@ -15,22 +15,28 @@ main.create-product-main{
 }
 
 form.create-form{
-    background-color: #323434;;
+    background-color: #323434;
+    margin: 0px 20px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
 }
 
 .titulo-create{
     font-size: 12px;
-    padding: 8px 0px;
+    padding: 8px 0px 8px 20px;
     margin-bottom: 10px;
+    color: white;
 }
 
 .control-form{
+    
     margin-bottom: 15px;
     width: 100%;
     /* border: solid 10px green; */
 }  
 
 .control-form label {
+    color: white;
     margin-bottom: 10px;
     display: block;
     font-size: 15px;
@@ -111,8 +117,10 @@ form.create-form{
     }    
 }
 @media (min-width: 769px) { 
-    .create-form{
+    form.create-form{
+        margin: auto;
         width: 50%;
+        
     }   
     .create-button button{
         width: 60%;
