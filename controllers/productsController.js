@@ -5,7 +5,7 @@ const productsControlador = {
         res.render('./products/createProduct');
     },
     update: (req, res) => {
-        /* res.render('updateProduct'); */
+        res.render('./products/updateProduct');
     },
 };
 

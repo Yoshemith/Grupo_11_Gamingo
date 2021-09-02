@@ -1,0 +1,138 @@
+.perfil-usuario{
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+}
+.name{
+    display: flex;
+    justify-content: flex-end;
+}
+.profile{
+    display: flex;
+    justify-content: flex-end;
+}
+.name-profile{
+    width: 50%;
+}
+.foto-perfil{
+    margin: 0 15px;
+    width: 10%;
+}
+.foto-perfil img{
+    width: 100%;
+}
+.img-product{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 10px;
+}
+.product-img{
+    display: flex;
+    justify-content: center;
+}
+.product-img img{
+    width: 60%;
+}
+.link-update{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.link-update a{
+    font-size: 22px;
+    color: #C77C91;
+}
+.titulo-product{
+    padding: 8px 0 0 20px;
+}
+.titulo-product h3{
+    font-weight: bold;
+    font-size: 24px;
+}
+.title-add{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 0;
+}
+.add-product{
+    margin: 0 5px;
+}
+.add-product h3 a{
+    text-decoration: none;
+    padding: 4px 15px;
+    font-size: 18px;
+    border: solid 2px #0CF2C9;
+    border-radius: 30px;
+    color: #0CF2C9;
+    letter-spacing: 1px;
+}
+.add-product h3{
+    
+}
+.product{
+    margin: 20px;
+}
+.inf-prod{
+    display: flex;
+    background-color: #323434;
+    border: solid 2px #323434;
+    border-radius: 10px;
+    padding: 25px 10px;
+    width: 100%;
+}
+.title-cat-price{
+    width: 70%;
+    padding: 0 20px;
+}
+.title h4{
+    font-size: 19px;
+}
+.cat-game p{
+    font-size: 16px;
+    padding: 15px 0;
+}
+.price-game h3{
+    font-size: 26px;
+}
+.img-product2{
+    width: 30%;
+}
+.link-update2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.link-update2 a{
+    font-size: 18px;
+    color: #3FB0D2;
+}
+.inf-prod img{
+    width: 90%;
+}
+
+@media (min-width: 481px){
+    .inf-prod img{
+        width: 70%;
+    }
+    .title h4{
+        font-size: 24px;
+
+    }
+    .cat-game p{
+        font-size: 22px;
+    }
+    .price-game h3{
+        font-size: 32px;
+    }
+}
+@media (min-width: 769px){
+    .view-products{
+        order: 1;
+    }
+}
+@media (min-width: 1280px){
+
+}
