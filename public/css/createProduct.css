@@ -2,29 +2,40 @@
 .profile-nametype{
     display: flex;
     justify-content: flex-end;
-    width: 100vw;
+    width: 100%;
+    height: 55px;
+    /* border: 1px solid yellow; */
 }
 .profile-name{
     display: flex;
     justify-content: flex-end;
 }
+.profile-name h4{
+    font-size: 12px;
+}
 .profile-type{
     display: flex;
     justify-content: flex-end;
+}
+.profile-type p{
+    font-size: 12px;
 }
 .profile-divs{
     width: 50%;
 }
 .profile-photo{
-    margin: 0 15px;
-    width: 10%;
+    margin-right: 15px; /*90px*/
+    margin-left: 10px;
+    width: 60px;
+    /* border: 1px solid yellow; */
 }
 .profile-photo img{
-    width: 100%;
+    width: 75%; /* 90% */
+    height: 80%; /* 90% */
 }
 
 main.create-product-main{
-    margin-top: 20px;
+    margin-top: 15px; /* 20px */
     margin-bottom: 40px;
 }
 .create-form{
@@ -35,7 +46,7 @@ main.create-product-main{
     border-radius: 10px;
 }
 .control input:focus{
-    border: #EAC926 1px solid;
+    border: var(--verdeagua) 1px solid;
 }
 
 form.create-form{
@@ -45,12 +56,12 @@ form.create-form{
     margin-right: 20px; */
 }
 .titulo-create{
-    font-size: 12px;
     padding: 8px 0px 0px 20px;
     color: white;
 }
 .titulo-create h2{
-    margin-top: 12px;
+    font-size: 18px;  /* 22px */
+    margin-top: 5px;
     margin-bottom: 12px;
 }
 .control-form{
@@ -171,7 +182,7 @@ form.create-form{
     height: 65px;
     border-radius: 15px ;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16pxpx; /* 20px */
     background-color: var(--verdeagua);
 }
 .cancel-button button{
@@ -182,7 +193,7 @@ form.create-form{
     height: 65px;
     border-radius: 15px ;
     color: #C77C91;
-    font-size: 20px;
+    font-size: 16px;    /* 20px */
     background-color: #323434;
 }
 
@@ -200,6 +211,9 @@ form.create-form{
     }    
 }
 @media (min-width: 769px) { 
+    .profile-photo{
+        margin-right: 4%;
+    }
     form.create-form{
         margin: auto;
         width: 50%;
@@ -210,6 +224,9 @@ form.create-form{
     } 
 }
 @media (min-width: 1280px) { 
+    .profile-photo{
+        margin-right: 6%;
+    }
     .create-form{
         width: 50%;
     }    
