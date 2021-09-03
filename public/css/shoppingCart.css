@@ -37,7 +37,6 @@
     background-color: var(--bodyfondo);
     color: white;
 } */
-
 .tags-shop{
     display: none;
 }
@@ -52,6 +51,7 @@
 }
 .main-carrito article img{
     width: 25%;
+    height: 25%;
     border-radius: 10px;
 }
 .main-carrito article div{
@@ -64,38 +64,51 @@
 
 .info-carrito{
     position: relative;
+    margin: auto;
 }
-.info-carrito i{
-    display: flex;
-    justify-content: flex-end;
+.main-carrito article i{
+    position: absolute;
+    right: 2.5%;
+    top: 8.5%;
+    /* display: flex;
+    justify-content: flex-end; */
     color: red;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.info-carrito .product-data{
+    width: 90%;
+    margin: auto;
 }
 .info-carrito h4, .info-carrito p{
     text-align: center;
     padding-top: 5px;
     padding-bottom: 5px;
-    border: solid 1px green;
+    /* border: solid 1px green; */
 }
-.quantity-section{
+.info-carrito .quantity-section{
     margin: auto;
-    width: 200px;
-    height: 60px;
-    border: solid 1px red;
-    padding: 0px;
+    width: 90%;
+    /* width: 200px; */
+    /* height: 60px; */
+    /* border: solid 1px red; */ 
+    /* padding: 0px; */
 }
-.quantity{
-    border: solid 1px yellow;
+.info-carrito .quantity-section .quantity{
+    /* border: solid 1px yellow; */
     margin: auto;
-    width: 80px;
-    text-align: center;
-    height: 40px;
+    /* width: 80px; */
+   /*  text-align: center; */
+    /* height: 40px; */
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .quantity button{
+    /* margin: auto; */
     width: 30px;
     height: 25px;
-    border-radius: 15%;
+    /* border-radius: 15%; */
     background-color: #d9d9d9;
     display: flex;
     justify-content: center;
@@ -111,9 +124,15 @@
     width: 40px;
     font-weight: 900;
     color: #202020;
-    margin: 7px;
+    margin: 0px;
     text-align: center;
    }
+/* .product-total{
+    margin: auto;
+} */
+.info-carrito .product-total{
+    display: none;
+}
 .subtotal{
     display: flex;
     flex-direction: row;
@@ -245,22 +264,32 @@
         width: 16%;
     }
     .tags-shop{
+        width: 100%;
         display: flex;
         flex-direction: row;
+        justify-content: flex-end;
+        
         height: 30px;
         padding-top: 10px;
         font-size: 18px; 
+        border: 1px solid blue;
+        
     }
     .tag-producto{
         width: 50%;
+        text-align: right;
+        padding-right: 20%;
+        border: 1px solid red;
     }
     .tag-precio{
         width: 25%;
-        padding-left: 5%;
+        padding-left: 2.5%;
+        border: 1px solid yellow;
     }
     .tag-cantidad{
         width: 25%;
-        padding-left: 5%;
+        padding-left: 2.5%;
+        border: 1px solid green;
     }
     /* .main-carrito{
         border: solid 1px yellow;
@@ -272,17 +301,23 @@
     .info-carrito{
         position: relative;
     }
-    .info-carrito i{
+   /*  .info-carrito i{
         position: absolute;
         right: -10%;
-    }
+    } */
     /* ARREGLAR ORGANIZACION AQUI EN CARRITO */
     .info-carrito{
         display: flex;
         flex-direction: row;
         align-content: center;
         /* border: solid 1px yellow; */
-        margin-left: 25px;
+        /* margin-left: 15px; */
+        justify-content: space-between;
+    }
+    .info-carrito .product-total{
+        display: block;
+        width: 90%;
+        margin: auto;
     }
     .button-payref{
         /* border: solid 1px yellow; */
@@ -336,6 +371,7 @@
     .tags-shop{
         padding-left: 75px;
         padding-right: 75px;
+        border: 1px solid yellow;
     }
     .tag-producto{
         width: 50%;
@@ -355,8 +391,8 @@
         width: 10%;
         border-radius: 10px;
     }
-    .info-carrito i{
+   /*  .info-carrito i{
         position: absolute;
         right: -16%;
-    }
+    } */
 }

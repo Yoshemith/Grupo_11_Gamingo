@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs') %>
+    <%- include('../partials/head.ejs') %>
 <body>
-    <%- include('./partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %>
 
     <section class="banner-section-shop">
         <div class="banner-shop-container">
@@ -12,54 +12,69 @@
     <main class="main-shopping">
         <div class="tags-shop">
             <h4 class="tag-producto">PRODUCTO</h4>
-            <h4 class="tag-precio">PRECIO</h4>
-            <h4 class="tag-cantidad">CANTIDAD</h4>
+            <h4 class="tag-precio">CANTIDAD</h4>
+            <h4 class="tag-cantidad">TOTAL</h4>
         </div>
         <section class="main-carrito">
             <article>
                 <img src="/img/item-1.png" alt="">
                 <div class="info-carrito">
-                    <i class="fas fa-trash-alt"></i>
-                    <h4>Nombre del producto</h4>
-                    <p>$ 100.00</p>
+                    <div class="product-data">
+                        <h4>Nombre del producto qwertyuiop asdfghjkl</h4>
+                        <p>$ 100.00</p>
+                    </div>
                     <div class="quantity-section">
                         <div class= "quantity">
-                            <button>+</button>
-                            <input type="text" value="1">
                             <button>-</button>
+                            <input type="text" value="1">
+                            <button>+</button>
                         </div>
                     </div>
+                    <div class="product-total">
+                        <p>$ 100.00</p>
+                    </div>
                 </div>
+                <i class="fas fa-trash-alt"></i>
                 </article>
             <article>
                 <img src="/img/item-2.png" alt="">
                 <div class="info-carrito">
-                    <i class="fas fa-trash-alt"></i>
-                    <h4>Nombre del producto</h4>
-                    <p>$ 100.00</p>
+                    <div class="product-data">
+                        <h4>Nombre del producto qwertyuiop asdfghjkl</h4>
+                        <p>$ 100.00</p>
+                    </div>
                     <div class="quantity-section">
                         <div class= "quantity">
-                            <button>+</button>
-                            <input type="text" value="1">
                             <button>-</button>
+                            <input type="text" value="1">
+                            <button>+</button>
                         </div>
                     </div>
+                    <div class="product-total">
+                        <p>$ 100.00</p>
+                    </div>
                 </div>
-                 </article>
+                <i class="fas fa-trash-alt"></i>
+                </article>
             <article>
                 <img src="/img/item-3.png" alt="">
                 <div class="info-carrito">
-                    <i class="fas fa-trash-alt"></i>
-                    <h4>Nombre del producto</h4>
-                    <p>$ 100.00</p>  
+                    <div class="product-data">
+                        <h4>Nombre del producto qwertyuiop asdfghjkl</h4>
+                        <p>$ 100.00</p>
+                    </div>
                     <div class="quantity-section">
                         <div class= "quantity">
-                            <button>+</button>
-                            <input type="text" value="1">
                             <button>-</button>
+                            <input type="text" value="1">
+                            <button>+</button>
                         </div>
                     </div>
+                    <div class="product-total">
+                        <p>$ 100.00</p>
+                    </div>
                 </div>
+                <i class="fas fa-trash-alt"></i>
             </article> 
         </section>
         <section class="payment-ref">
@@ -190,6 +205,6 @@
             </div>
         </section> 
     </main>
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>
