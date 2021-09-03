@@ -1,3 +1,13 @@
+.update-product-main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.update-products{
+    width: 100%;
+}
+.view-products{
+    width: 100%;
+}
 .perfil-usuario{
     display: flex;
     justify-content: flex-end;
@@ -48,6 +58,8 @@
 .titulo-product h3{
     font-weight: bold;
     font-size: 24px;
+    padding-left: 10px;
+    margin-bottom: 25px;
 }
 .title-add{
     width: 100%;
@@ -55,7 +67,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 40px 0;
+    margin: 25px 0;
 }
 .add-product{
     margin: 0 5px;
@@ -129,10 +141,65 @@
     }
 }
 @media (min-width: 769px){
+    .update-products{
+        width: 55%;
+        display: flex;
+        flex-wrap: wrap;
+        order: 2;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
     .view-products{
-        order: 1;
+        width: 45%;
+    }
+    .title-add{
+        justify-content: space-between;
+    }
+    .update-products .titulo-create{
+        text-align: left;
+        width: 45%;
+        padding-left: 30px;
+    }
+    .dates{
+        width: 55%;
+        order: 2;
+    }
+    .formulario-update{
+        width: 90%;
+        order: 2;
+        margin: auto;
+    }
+    .formulario-update .create-form{
+        width: 100%;
+        margin: 0px;
+    }
+    .inf-prod{
+        margin-bottom: 40px 0 20px 0;
+    }
+    .img-product2{
+        padding-left: 20px;
+    }
+    .img-product2 img{
+        width: 60%;
+    }
+    .price-game h3{
+        padding: 0;
     }
 }
 @media (min-width: 1280px){
-
+    .inf-prod{
+        height: 23vh;
+    }
+    .title-cat-price{
+        padding: 0;
+    }
+    .title h4{
+        font-size: 19px;
+    }
+    .cat-game p{
+        padding: 0;
+    }
+    .price-game h3{
+        font-size: 26px;
+    }
 }
