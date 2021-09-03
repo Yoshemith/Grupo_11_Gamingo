@@ -5,142 +5,169 @@
     <%- include('../partials/header.ejs') %>
 
     <main class="create-product-main">
-        <section class="update-products">
-            <div class="perfil-usuario">
-                <div class="name-profile">
-                    <div class="name">
-                        <h4>Nombre del usuario</h4>
+        <div class="update-product-main">
+            <section class="update-products">
+                <div class="dates">
+                    <section class="profile-nametype">
+                        <div class="profile-divs">
+                            <div class="profile-name">
+                                <h4>Nombre del usuario</h4>
+                            </div>
+                            <div class="profile-type">
+                                <p>Administrador</p>
+                            </div>
+                        </div>
+                        <div class="profile-photo">
+                            <img src="/img/user-profile-beta.png" alt="Foto del usuario">
+                        </div>
+                    </section>
+                </div>
+                <div class="titulo-product">
+                    <h3>Editar producto</h3>
+                </div>
+                <div class="formulario-update">
+                    <form action="/" method="get" class="create-form">
+                        <div class="control-form" >
+                            <label for="nombreProducto">Nombre del producto</label>
+                            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Ingresa nombre del producto" minlength="5" class="control" required>
+                        </div>
+                        <div class="control-form">
+                            <label for="categoria">Categoria</label>
+                            <select name="categoria" id="categoria" aria-placeholder="-Selecciona categoria-">
+                                <option value="switch">SWITCH</option>
+                                <option value="xbox-one">XBOX ONE</option>
+                                <option value="xbox-360">XBOX 360</option>
+                                <option value="ps5">PS5</option>
+                                <option value="ps4">PS4</option>
+                            </select>
+                
+                        </div>
+                        <div class="control-form">
+                            <label for="precio">Precio</label>
+                            <input type="number" name="precio" id="precio" placeholder="Ingresa una cantidad" class="control" required>
+                        </div>
+                        <div class="control-form">
+                            <label for="descripcion">Descripcion</label>
+                            <textarea name="descripcion" id="descripcion" cols="20" rows="6" placeholder="Escriba una descripcion del producto" required></textarea>
+                        </div>
+                        <div class="control-form">
+                            <label for="imagen">Imagen del producto</label>
+                            <div class="img-product">
+                                <div class="product-img">
+                                    <img src="/img/item-2.png" alt="Imagen del producto">
+                                </div>
+                                <div class="link-update">
+                                    <a href="updateProduct">Editar</a>
+                                </div>
+                            </div>
+                            <input type="file" name="imagen" id="imagen" placeholder="Ingresa una Imagen" class="control" >
+                        </div>
+                        <div class="control-buttons">
+                            <div class="create-button">
+                                <button type="submit">GUARDAR CAMBIOS</button>
+                            </div>
+                            <div class="cancel-button">
+                                <button type="reset">CANCELAR</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="view-products">
+                <div class="title-add">
+                    <div class="titulo-product">
+                        <h3>Productos</h3>
                     </div>
-                    <div class="profile">
-                        <p>Tipo de perfil</p>
+                    <div class="add-product">
+                        <h3><a href="/create">+ AGREGAR PRODUCTO</a></h3>
                     </div>
                 </div>
-                <div class="foto-perfil">
-                    <img src="/img/logo-prueba.png" alt="Foto del usuario">
-                </div>
-            </div>
-            <div class="titulo-create">
-                <h2>Editar producto</h2>
-            </div>
-            <form action="/" method="get" class="create-form">
-                <div class="control-form" >
-                    <label for="nombreProducto">Nombre del producto</label>
-                    <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Ingresa nombre del producto" minlength="5" class="control" required>
-                </div>
-                <div class="control-form">
-                    <label for="categoria">Categoria</label>
-                    <select name="categoria" id="categoria" aria-placeholder="-Selecciona categoria-">
-                        <option value="switch">SWITCH</option>
-                        <option value="xbox-one">XBOX ONE</option>
-                        <option value="xbox-360">XBOX 360</option>
-                        <option value="ps5">PS5</option>
-                        <option value="ps4">PS4</option>
-                    </select>
-        
-                </div>
-                <div class="control-form">
-                    <label for="precio">Precio</label>
-                    <input type="number" name="precio" id="precio" placeholder="Ingresa una cantidad" class="control" required>
-                </div>
-                <div class="control-form">
-                    <label for="descripcion">Descripcion</label>
-                    <textarea name="descripcion" id="descripcion" cols="20" rows="6" placeholder="Escriba una descripcion del producto" required></textarea>
-                </div>
-                <div class="control-form">
-                    <label for="imagen">Imagen del producto</label>
-                    <div class="img-product">
-                        <div class="product-img">
+                <div class="product">
+                    <div class="inf-prod">
+                        <div class="img-product2">
                             <img src="/img/item-2.png" alt="Imagen del producto">
                         </div>
-                        <div class="link-update">
+                        <div class="title-cat-price">
+                            <div class="title">
+                                <h4>SUPER MARIO PARTY</h4>
+                            </div>
+                            <div class="cat-game">
+                                <p>SWITCH</p>
+                            </div>
+                            <div class="price-game">
+                                <h3>$45.00</h3>
+                            </div>
+                        </div>
+                        <div class="link-update2">
                             <a href="updateProduct">Editar</a>
                         </div>
                     </div>
-                    <input type="file" name="imagen" id="imagen" placeholder="Ingresa una Imagen" class="control" >
                 </div>
-                <div class="control-buttons">
-                    <div class="create-button">
-                        <button type="submit">GUARDAR CAMBIOS</button>
-                    </div>
-                    <div class="cancel-button">
-                        <button type="reset">CANCELAR</button>
-                    </div>
-                </div>
-            </form>
-        </section>
-        <section class="view-products">
-            <div class="title-add">
-                <div class="titulo-product">
-                    <h3>Productos</h3>
-                </div>
-                <div class="add-product">
-                    <h3><a href="/create">+ AGREGAR PRODUCTO</a></h3>
-                </div>
-            </div>
-            <div class="product">
-                <div class="inf-prod">
-                    <div class="img-product2">
-                        <img src="/img/item-2.png" alt="Imagen del producto">
-                    </div>
-                    <div class="title-cat-price">
-                        <div class="title">
-                            <h4>SUPER MARIO PARTY</h4>
+                <div class="product">
+                    <div class="inf-prod">
+                        <div class="img-product2">
+                            <img src="/img/item-2.png" alt="Imagen del producto">
                         </div>
-                        <div class="cat-game">
-                            <p>SWITCH</p>
+                        <div class="title-cat-price">
+                            <div class="title">
+                                <h4>SUPER MARIO PARTY</h4>
+                            </div>
+                            <div class="cat-game">
+                                <p>SWITCH</p>
+                            </div>
+                            <div class="price-game">
+                                <h3>$45.00</h3>
+                            </div>
                         </div>
-                        <div class="price-game">
-                            <h3>$45.00</h3>
+                        <div class="link-update2">
+                            <a href="updateProduct">Editar</a>
                         </div>
-                    </div>
-                    <div class="link-update2">
-                        <a href="updateProduct">Editar</a>
                     </div>
                 </div>
-            </div>
-            <div class="product">
-                <div class="inf-prod">
-                    <div class="img-product2">
-                        <img src="/img/item-2.png" alt="Imagen del producto">
-                    </div>
-                    <div class="title-cat-price">
-                        <div class="title">
-                            <h4>SUPER MARIO PARTY</h4>
+                <div class="product">
+                    <div class="inf-prod">
+                        <div class="img-product2">
+                            <img src="/img/item-2.png" alt="Imagen del producto">
                         </div>
-                        <div class="cat-game">
-                            <p>SWITCH</p>
+                        <div class="title-cat-price">
+                            <div class="title">
+                                <h4>SUPER MARIO PARTY</h4>
+                            </div>
+                            <div class="cat-game">
+                                <p>SWITCH</p>
+                            </div>
+                            <div class="price-game">
+                                <h3>$45.00</h3>
+                            </div>
                         </div>
-                        <div class="price-game">
-                            <h3>$45.00</h3>
+                        <div class="link-update2">
+                            <a href="updateProduct">Editar</a>
                         </div>
-                    </div>
-                    <div class="link-update2">
-                        <a href="updateProduct">Editar</a>
                     </div>
                 </div>
-            </div>
-            <div class="product">
-                <div class="inf-prod">
-                    <div class="img-product2">
-                        <img src="/img/item-2.png" alt="Imagen del producto">
-                    </div>
-                    <div class="title-cat-price">
-                        <div class="title">
-                            <h4>SUPER MARIO PARTY</h4>
+                <div class="product">
+                    <div class="inf-prod">
+                        <div class="img-product2">
+                            <img src="/img/item-2.png" alt="Imagen del producto">
                         </div>
-                        <div class="cat-game">
-                            <p>SWITCH</p>
+                        <div class="title-cat-price">
+                            <div class="title">
+                                <h4>SUPER MARIO PARTY</h4>
+                            </div>
+                            <div class="cat-game">
+                                <p>SWITCH</p>
+                            </div>
+                            <div class="price-game">
+                                <h3>$45.00</h3>
+                            </div>
                         </div>
-                        <div class="price-game">
-                            <h3>$45.00</h3>
+                        <div class="link-update2">
+                            <a href="updateProduct">Editar</a>
                         </div>
-                    </div>
-                    <div class="link-update2">
-                        <a href="updateProduct">Editar</a>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <%- include('../partials/footer.ejs') %>
