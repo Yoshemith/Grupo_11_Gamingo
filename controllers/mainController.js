@@ -6,10 +6,10 @@ const path = require('path');
 const controlador = {
     home: (req, res) => {
         //res.sendFile(path.resolve('./views/index.html'));
-        res.render('index'); //Renderizacion con ejs 
+        res.render('./main/index'); //Renderizacion con ejs 
     },
     shopping_cart: (req, res) => {
-        res.render('shoppingCart');
+        res.render('./main/shoppingCart');
     },
     productDetails: (req, res) => {
         res.render('productDetail');
