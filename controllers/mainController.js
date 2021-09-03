@@ -12,7 +12,7 @@ const controlador = {
         res.render('shoppingCart');
     },
     productDetails: (req, res) => {
-        res.render('productDetail');
+        res.render('./products/productDetail');
     }
 };
 

@@ -7,6 +7,7 @@ const productsControlador = {
     update: (req, res) => {
         res.render('./products/updateProduct');
     },
+    
 };
 
 module.exports = productsControlador;

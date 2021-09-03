@@ -19,8 +19,8 @@ app.use(rutasProducts);
 app.set('view engine', 'ejs');
 
 //Puerto default o 3000
-let port = process.env.PORT || 3030;
+let port = process.env.PORT || 3000;
 
 //Levantando el servidor
-app.listen(port, () => console.log('Server running at port 3030'));
+app.listen(port, () => console.log('Server running at port 3000'));
 
