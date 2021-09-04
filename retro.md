@@ -34,3 +34,21 @@
 
     5. Dejar de hacer
         - Por ahorita no tenemos ningún inconveniente.
+
+## Sprint 3
+    1. Comenzar a hacer
+        - Realizar y completar las animaciones.
+
+    2. Hacer más
+        - Optimizar y organizar mejor los partials para un manejo escalable.
+        - Programacion de los elementos definidos.
+
+    3. Continuar haciendo
+        - La comunicación entre el equipo.
+        - El trabajo en tiempo y forma.
+
+    4. Hacer menos
+        - Por ahora no hay algun inconveniente.
+
+    5. Dejar de hacer
+        - Por ahora no hay algun inconveniente.

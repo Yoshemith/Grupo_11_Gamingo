@@ -5,3 +5,15 @@ Cada equipo habla como máximo tres minutos de tres temas puntuales:
 
 weekly.md con un resumen de las tareas completadas,
 los impedimentos encontrados y las soluciones propuestas indicando los integrantes.
+
+## Sprint 3
+> Semana:
+    ● Qué hizo ayer.
+        -Se integro el manejo de templatos ejs.
+        -Se integro el manejo de ruteo.
+    ● Si se encontró con algún impedimento.
+        -La implementacion de drag&drop en creacion de productos
+        -La terminacion de detalles en Shopping cart
+    ● Qué va a hacer hoy.
+        -Finalizar la vista de cracion del producto
+        -Organizacion de los controladores
