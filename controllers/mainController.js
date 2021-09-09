@@ -10,9 +10,6 @@ const controlador = {
     },
     shopping_cart: (req, res) => {
         res.render('./main/shoppingCart');
-    },
-    productDetails: (req, res) => {
-        res.render('./products/productDetail');
     }
 };
 
