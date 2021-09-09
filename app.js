@@ -10,6 +10,7 @@ const app = express();
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(express.urlencoded({ extended: false }));
 
 //requerir rutas
 const rutasMain = require('./routers/main');

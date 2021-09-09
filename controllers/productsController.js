@@ -1,17 +1,26 @@
 const path = require('path');
 
 const productsControlador = {
-    products: (req, res) => {
+    index: (req, res) => {
         res.render('./products/products');
+    },
+    detail: (req, res) => {
+        res.render('./products/productDetail');
     },
     create: (req, res) => {
         res.render('./products/createProduct');
     },
-    update: (req, res) => {
+    store: (req, res) => {
+
+    },
+    edit: (req, res) => {
         res.render('./products/updateProduct');
     },
-    detail: (req, res) => {
-        res.render('./products/productDetail');
+    update: (req, res) => {
+        
+    },
+    destroy: (req, res) => {
+        
     }
 };
 
