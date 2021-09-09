@@ -1,9 +1,15 @@
+// ************ Require's ************
 const express = require('express');
+const path = require('path');
+const methodOverride =  require('method-override'); // Pasar usar los métodos PUT y DELETE 
+
+// ************ express()
 const app = express();
 
-const path = require('path');
+// ************ Middlewares ************
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
+app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
 //requerir rutas
 const rutasMain = require('./routers/main');
