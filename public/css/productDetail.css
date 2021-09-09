@@ -70,7 +70,10 @@ p.precio-tachado {
 p {
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
+    /* font-size: 14px; */
+    /* Corregir aqui y los tags del css, al parecer afecta al header y a otras secciones
+       Porfa checalo, manejaremos css individuales para cada seccion
+    */
     line-height: 22px;
 }
 
