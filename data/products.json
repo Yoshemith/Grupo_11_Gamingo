@@ -10,11 +10,20 @@
     },
     {
      "id": 2,
-     "name": "Videojuego Generico 2021",
+     "name": "Luigi Mansion 3",
      "description": "Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd",
      "image": "default-image.jpg",
      "category": "ps5",
      "price": 500,
+     "discount": 0
+    },
+    {
+     "id": 3,
+     "name": "Luigi Mansion 3",
+     "description": "Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd",
+     "image": "default-image.jpg",
+     "category": "ps5",
+     "price": 5000,
      "discount": 0
     }
 ]
