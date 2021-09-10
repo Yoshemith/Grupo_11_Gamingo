@@ -14,13 +14,13 @@ app.use(express.urlencoded({ extended: false }));
 
 //requerir rutas
 const rutasMain = require('./routers/main');
-app.use(rutasMain);
+app.use('/', rutasMain);
 
 const rutasUsers = require('./routers/users');
 app.use(rutasUsers);
 
 const rutasProducts = require('./routers/products');
-app.use(rutasProducts);
+app.use('/products', rutasProducts);
 
 //Confifiguracion EJS como template engine
 app.set('view engine', 'ejs');

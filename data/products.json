@@ -1,29 +1,47 @@
 [
-    {
-     "id": 1,
-     "name": "Luigi Mansion 3",
-     "description": "Videojuego Luigi Mansion 3a Edicion para Nintendo Switch 2021 lorem ipsum lorem ipsum xd xd",
-     "image": "default-image.jpg",
-     "category": "switch",
-     "price": 800,
-     "discount": 0
-    },
-    {
-     "id": 2,
-     "name": "Luigi Mansion 3",
-     "description": "Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd",
-     "image": "default-image.jpg",
-     "category": "ps5",
-     "price": 500,
-     "discount": 0
-    },
-    {
-     "id": 3,
-     "name": "Luigi Mansion 3",
-     "description": "Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd",
-     "image": "default-image.jpg",
-     "category": "ps5",
-     "price": 5000,
-     "discount": 0
-    }
+ {
+  "id": 1,
+  "name": "Luigi Mansion 3",
+  "category": "switch",
+  "price": 800,
+  "description": "Videojuego Luigi Mansion 3a Edicion para Nintendo Switch 2021 lorem ipsum lorem ipsum xd xd",
+  "image": "default-image.jpg",
+  "discount": 0
+ },
+ {
+  "id": 2,
+  "name": "Luigi Mansion 3",
+  "category": "ps5",
+  "price": 500,
+  "description": "Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd",
+  "image": "default-image.jpg",
+  "discount": 0
+ },
+ {
+  "id": 3,
+  "name": "Luigi Mansion 3",
+  "category": "ps5",
+  "price": 5000,
+  "description": "Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd",
+  "image": "default-image.jpg",
+  "discount": 0
+ },
+ {
+  "id": 4,
+  "name": "Halo 3 New Edition",
+  "category": "xbox one",
+  "price": "1200",
+  "description": "Videojuego Halo 3, nueva edicion etcetera, Videojuego Halo 3, nueva edicion etcetera Videojuego Halo 3, nueva edicion etcetera Videojuego Halo 3, nueva edicion etcetera",
+  "image": "default-image.jpg",
+  "discount": 0
+ },
+ {
+  "id": 5,
+  "name": "Midnight Club 3",
+  "category": "ps5",
+  "price": "1600",
+  "description": "Juego de Midnight club 3 remix, etcetera, xd lorem ipsum, Juego de Midnight club 3 remix, etcetera, xd lorem ipsum, Juego de Midnight club 3 remix, etcetera, xd lorem ipsum, Juego de Midnight club 3 remix, etcetera, xd lorem ipsum",
+  "image": "default-image.jpg",
+  "discount": 0
+ }
 ]

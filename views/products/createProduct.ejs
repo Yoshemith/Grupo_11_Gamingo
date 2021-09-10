@@ -21,30 +21,30 @@
     <div class="titulo-create">
         <h2>Agregar nuevo producto</h2>
     </div>
-    <form action="/" method="post" class="create-form" enctype="multipart/form-data">
+    <form action="/products" method="POST" class="create-form" enctype="multipart/form-data">
         <div class="control-form" >
-            <label for="nombreProducto">Nombre del producto</label>
-            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Ingresa nombre del producto" minlength="5" class="control" required>
+            <label for="name">Nombre del producto</label>
+            <input type="text" name="name" id="name" placeholder="Ingresa nombre del producto" minlength="5" class="control" required>
         </div>
         <div class="control-form">
-            <label for="categoria">Categoria</label>
-            <select name="categoria" id="categoria" required>
+            <label for="category">Categoria</label>
+            <select name="category" id="category" required>
                 <option value="" disabled selected hidden>-Selecciona categoria-</option>
                 <option value="switch">SWITCH</option>
-                <option value="xbox-one">XBOX ONE</option>
-                <option value="xbox-360">XBOX 360</option>
+                <option value="xbox one">XBOX ONE</option>
+                <option value="xbox 360">XBOX 360</option>
                 <option value="ps5">PS5</option>
                 <option value="ps4">PS4</option>
             </select>
 
         </div>
         <div class="control-form">
-            <label for="precio">Precio</label>
-            <input type="number" name="precio" id="precio" placeholder="Ingresa una cantidad" class="control" required>
+            <label for="price">Precio</label>
+            <input type="number" name="price" id="price" placeholder="Ingresa una cantidad" class="control" required>
         </div>
         <div class="control-form">
-            <label for="descripcion">Descripcion</label>
-            <textarea name="descripcion" id="descripcion" cols="20" rows="6" placeholder="Escriba una descripcion del producto" required></textarea>
+            <label for="description">Descripcion</label>
+            <textarea name="description" id="description" cols="20" rows="6" placeholder="Escriba una descripcion del producto" required></textarea>
         </div>
         <div class="control-form-container">
             <label for="container">Imagen del producto</label>
@@ -57,7 +57,7 @@
                     <span class="drag-header"> aqui o 
                         <span class="browse-button"> elige un archivo</span>
                     </span>
-                    <input type="file" hidden>
+                    <input type="file" name="product-image" hidden>
                     <span class="drag-support">
                         Soportados: JPEG, JPG, PNG
                     </span>

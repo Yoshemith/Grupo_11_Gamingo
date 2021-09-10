@@ -4,7 +4,7 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 
 const productsControlador = {
@@ -21,7 +21,21 @@ const productsControlador = {
         res.render('./products/createProduct');
     },
     store: (req, res) => {
-
+        let upImage; 
+		if(req.file){
+			upImage = req.file.filename;
+		}else{
+			upImage = 'default-image.jpg';
+		}
+		let newProduct = {
+            id: products[products.length - 1].id + 1,
+			...req.body,
+			image: upImage,
+            discount: 0
+		};
+		products.push(newProduct);
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		res.redirect('/products');
     },
     edit: (req, res) => {
         res.render('./products/updateProduct');

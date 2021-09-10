@@ -28,11 +28,11 @@ let fileUpload = multer({ storage });
 //router.get('/productDetail', productsController.detail)
 
 /*** SHOW ALL PRODUCTS ***/ 
-router.get('/products', productsController.index); 
+router.get('/', productsController.index); 
 
 /*** CREATE PRODUCT ***/ 
 router.get('/create', productsController.create); 
-router.post('/', productsController.store); 
+router.post('/', fileUpload.single('product-image'), productsController.store); 
 
 /*** DETAILS PRODUCT ***/ 
 router.get('/:id/', productsController.detail); 
