@@ -52,7 +52,7 @@ function displayFile(){
         fileReader.onload = () => {
             let fileURL = fileReader.result;
             /* console.log(fileUrl); */
-            let imgTag = `<img src="${fileURL}" alt="">`;
+            let imgTag = `<img src="${fileURL}" alt="" name="product-image">`;
             dragContainer.innerHTML = imgTag;
         };
         fileReader.readAsDataURL(file);
