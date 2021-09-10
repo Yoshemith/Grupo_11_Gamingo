@@ -1,0 +1,20 @@
+[
+    {
+     "id": 1,
+     "name": "Luigi Mansion 3",
+     "description": "Videojuego Luigi Mansion 3a Edicion para Nintendo Switch 2021 lorem ipsum lorem ipsum xd xd",
+     "image": "default-image.jpg",
+     "category": "switch",
+     "price": 800,
+     "discount": 0
+    },
+    {
+     "id": 2,
+     "name": "Videojuego Generico 2021",
+     "description": "Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd",
+     "image": "default-image.jpg",
+     "category": "ps5",
+     "price": 500,
+     "discount": 0
+    }
+]

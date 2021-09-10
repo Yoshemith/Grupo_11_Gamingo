@@ -39,6 +39,10 @@
     justify-content: flex-end;
     color: #C77C91;
 }
+.ver-mas a{
+    text-decoration: none;
+    color: #C77C91;
+}
 .products{
     display: flex;
     flex-direction: row;
