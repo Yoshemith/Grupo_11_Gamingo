@@ -19,30 +19,30 @@ let storage = multer.diskStorage({
 let fileUpload = multer({ storage });
 
 //SHOW ALL
-router.get('/products', productsController.index);
+//router.get('/products', productsController.index);
 //CREATE
-router.get('/create', productsController.create);
+//router.get('/create', productsController.create);
 //UPDATE
-router.get('/update', productsController.edit);
+//router.get('/update', productsController.edit);
 //PRODUCT DETAIL
-router.get('/productDetail', productsController.detail)
+//router.get('/productDetail', productsController.detail)
 
 /*** SHOW ALL PRODUCTS ***/ 
-//router.get('/', productsController.index); 
+router.get('/products', productsController.index); 
 
 /*** CREATE PRODUCT ***/ 
-//router.get('/create', productsController.create); 
-//router.post('/', productsController.store); 
+router.get('/create', productsController.create); 
+router.post('/', productsController.store); 
 
 /*** DETAILS PRODUCT ***/ 
-//router.get('/:id/', productsController.detail); 
+router.get('/:id/', productsController.detail); 
 
 /*** EDIT PRODUCT ***/ 
-//router.get('/:id/edit', productsController.edit); 
-//router.put('/:id', productsController.update); 
+router.get('/:id/edit', productsController.edit); 
+router.put('/:id', productsController.update); 
 
 /*** DELETE PRODUCT***/ 
-//router.delete('/:id', productsController.destroy); 
+router.delete('/:id', productsController.destroy); 
 
 
 module.exports = router;
