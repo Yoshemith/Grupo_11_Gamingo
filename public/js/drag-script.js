@@ -1,8 +1,9 @@
 const dragContainer = document.querySelector('.container');
 const dragText = document.querySelector('.drag-header');
 
-let button = document.querySelector('.browse-button');
-let input = document.querySelector('.drag-area input');
+const button = document.querySelector('.browse-button');
+const input = document.querySelector('.drag-area input');
+const inputId = document.getElementById('product-image');
 
 let file;
 
@@ -11,9 +12,14 @@ button.onclick = () => {
 }
 //when browse
 input.addEventListener('change', function(){
-    file = this.files[0];
+    //inputId.files = this.files; //prueba para ver si guarda la imagen
+    inputId.file = this.files[0];
+    console.log(inputId.file);
+
+    file = inputId.file;//this.files[0];
     dragContainer.classList.add('active');
     displayFile();
+    console.log(inputId.file);
 });
 
 //when file is inside the drag area
@@ -35,10 +41,15 @@ dragContainer.addEventListener('dragleave', () => {
 dragContainer.addEventListener('drop', (event) => {
     event.preventDefault();
 
-    file = event.dataTransfer.files[0];
+    //inputId.files = event.dataTransfer.files; //prueba para ver si guarda la imagen
+    inputId.file = event.dataTransfer.files[0]; //prueba de manera individual
+    console.log(inputId.file);
+
+    file = inputId.file;//event.dataTransfer.files[0];
     /* console.log(file); */
     displayFile();
     /* console.log('File is dropped in the drag area'); */ 
+    console.log(inputId.file);
 });
 
 function displayFile(){
@@ -52,12 +63,15 @@ function displayFile(){
         fileReader.onload = () => {
             let fileURL = fileReader.result;
             /* console.log(fileUrl); */
-            let imgTag = `<img src="${fileURL}" alt="" name="product-image">`;
+            let imgTag = `<img src="${fileURL}" alt="">`;
             dragContainer.innerHTML = imgTag;
         };
         fileReader.readAsDataURL(file);
     }else{
         alert('Este archivo no es soportado.');
         dragContainer.classList.remove('active');
+        dragText.textContent = 'Arrastra y suelta';
     }
 };
+
+//dragContainer.addEventListener('click', () => inputId.click())

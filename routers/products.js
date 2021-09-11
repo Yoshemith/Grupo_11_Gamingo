@@ -11,28 +11,20 @@ let storage = multer.diskStorage({
         cb(null, folder);
     },
     filename: (req, file, cb)=>{
+        console.log(file);
         let imageName = file.fieldname + '-' + Date.now() + '-' + path.extname(file.originalname);
         cb(null, imageName);
     }
 })
 
-let fileUpload = multer({ storage });
-
-//SHOW ALL
-//router.get('/products', productsController.index);
-//CREATE
-//router.get('/create', productsController.create);
-//UPDATE
-//router.get('/update', productsController.edit);
-//PRODUCT DETAIL
-//router.get('/productDetail', productsController.detail)
+let upload = multer({ storage: storage });
 
 /*** SHOW ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 
 
 /*** CREATE PRODUCT ***/ 
 router.get('/create', productsController.create); 
-router.post('/', fileUpload.single('product-image'), productsController.store); 
+router.post('/', upload.single('product-image'), productsController.store);  //still file missing even with fileUpload.array
 
 /*** DETAILS PRODUCT ***/ 
 router.get('/:id/', productsController.detail); 
