@@ -16,11 +16,14 @@
                 <h4 class="ver-mas"><a href="/products">Ver mas...</a></h4>
             </div>
             <div class="products">
+                <% products.forEach(function(product){ 
+                    let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
+                %>
                 <article>
-                    <a href="/products/productDetail"><img src="/img/item-1.png" alt=""></a>
+                    <a href="/products/<%= `${product.id}` %>"><img src="/img/products/<%= product.image %>" alt=""></a>
                     <div class="main-article">
-                        <h4 class="description">Nombre del producto</h4>
-                        <p class="price">$ 1,200</p>
+                        <h4 class="description"><%= product.name %></h4>
+                        <p class="price">$ <%= toThousand(finalPrice) %></p>
                         <div class="rating">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -30,76 +33,7 @@
                         </div>
                     </div>
                 </article>
-                <article>
-                    <a href="/products/productDetail"><img src="/img/item-2.png" alt=""></a>
-                    <div class="main-article">
-                        <h4 class="description">Nombre del producto</h4>
-                        <p class="price">$ 2,300</p>
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <a href="/products/productDetail"><img src="/img/item-3.png" alt=""></a>
-                    <div class="main-article">
-                        <h4 class="description">Nombre del producto</h4>
-                        <p class="price">$ 1,500</p>
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <a href="/products/productDetail"><img src="/img/item-1.png" alt=""></a>
-                    <div class="main-article">
-                        <h4 class="description">Nombre del producto</h4>
-                        <p class="price">$ 1,200</p>
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <a href="/products/productDetail"><img src="/img/item-2.png" alt=""></a>
-                    <div class="main-article">
-                        <h4 class="description">Nombre del producto</h4>
-                        <p class="price">$ 2,300</p>
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <a href="/products/productDetail"><img src="/img/item-3.png" alt=""></a>
-                    <div class="main-article">
-                        <h4 class="description">Nombre del producto</h4>
-                        <p class="price">$ 1,500</p>
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </article>
+                <% }) %>
             </div>
         </section>
         <section class="newest-products">
@@ -288,5 +222,6 @@
         </section>
     </main>
     <%- include('../partials/footer.ejs') %>
+    <script src="/js/product-slider.js"></script>
 </body>
 </html>
