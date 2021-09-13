@@ -5,7 +5,7 @@
   "category": "switch",
   "price": 800,
   "description": "Videojuego Luigi Mansion 3a Edicion para Nintendo Switch 2021 lorem ipsum lorem ipsum xd xd",
-  "image": "default-image.jpg",
+  "image": "default-image.png",
   "discount": 0
  },
  {
@@ -14,7 +14,7 @@
   "category": "ps5",
   "price": 500,
   "description": "Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd",
-  "image": "default-image.jpg",
+  "image": "default-image.png",
   "discount": 0
  },
  {
@@ -23,7 +23,7 @@
   "category": "ps5",
   "price": 5000,
   "description": "Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd",
-  "image": "default-image.jpg",
+  "image": "default-image.png",
   "discount": 0
  },
  {
@@ -32,7 +32,7 @@
   "category": "xbox one",
   "price": "1200",
   "description": "Videojuego Halo 3, nueva edicion etcetera, Videojuego Halo 3, nueva edicion etcetera Videojuego Halo 3, nueva edicion etcetera Videojuego Halo 3, nueva edicion etcetera",
-  "image": "default-image.jpg",
+  "image": "default-image.png",
   "discount": 0
  },
  {
@@ -41,7 +41,7 @@
   "category": "ps5",
   "price": "1600",
   "description": "Juego de Midnight club 3 remix, etcetera, xd lorem ipsum, Juego de Midnight club 3 remix, etcetera, xd lorem ipsum, Juego de Midnight club 3 remix, etcetera, xd lorem ipsum, Juego de Midnight club 3 remix, etcetera, xd lorem ipsum",
-  "image": "default-image.jpg",
+  "image": "default-image.png",
   "discount": 0
  },
  {
@@ -50,7 +50,34 @@
   "category": "xbox one",
   "price": "900",
   "description": "Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd, Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd",
-  "image": "default-image.jpg",
+  "image": "default-image.png",
+  "discount": 0
+ },
+ {
+  "id": 7,
+  "name": "Midnight Club 3",
+  "category": "ps5",
+  "price": "1600",
+  "description": "Juego de Midnight club 3 remix, etcetera, xd lorem ipsum, Juego de Midnight club 3 remix, etcetera, xd lorem ipsum, Juego de Midnight club 3 remix, etcetera, xd lorem ipsum, Juego de Midnight club 3 remix, etcetera, xd lorem ipsum",
+  "image": "default-image.png",
+  "discount": 0
+ },
+ {
+  "id": 8,
+  "name": "Mortal Kombat 11",
+  "category": "xbox one",
+  "price": "900",
+  "description": "Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd, Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd",
+  "image": "default-image.png",
+  "discount": 0
+ },
+ {
+  "id": 9,
+  "name": "Mortal Kombat 11",
+  "category": "xbox one",
+  "price": "900",
+  "description": "Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd, Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd",
+  "image": "default-image.png",
   "discount": 0
  }
 ]

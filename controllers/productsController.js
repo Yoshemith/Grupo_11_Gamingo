@@ -26,7 +26,7 @@ const productsControlador = {
 		if(req.file){
 			upImage = req.file.filename;
 		}else{
-			upImage = 'default-image.jpg';
+			upImage = 'default-image.png';
 		}
 		let newProduct = {
             id: products[products.length - 1].id + 1,

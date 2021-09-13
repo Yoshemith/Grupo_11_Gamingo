@@ -5,12 +5,12 @@
 </head>
 <body>
     <%- include('../partials/header.ejs') %>
-<main class="main-index">
-    <section class="catalogue">
+<main class="main-products">
+    <section class="catalogue-products">
         <div class="tags">
             <h4 class="tag-title">Todos los productos</h4>
         </div>
-        <div class="products">
+        <div class="all-products">
             <% products.forEach(function(product){ 
                 let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
             %>
