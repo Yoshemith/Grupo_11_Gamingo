@@ -52,32 +52,5 @@
   "description": "Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd, Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd",
   "image": "default-image.png",
   "discount": 0
- },
- {
-  "id": 7,
-  "name": "Midnight Club 3",
-  "category": "ps5",
-  "price": "1600",
-  "description": "Juego de Midnight club 3 remix, etcetera, xd lorem ipsum, Juego de Midnight club 3 remix, etcetera, xd lorem ipsum, Juego de Midnight club 3 remix, etcetera, xd lorem ipsum, Juego de Midnight club 3 remix, etcetera, xd lorem ipsum",
-  "image": "default-image.png",
-  "discount": 0
- },
- {
-  "id": 8,
-  "name": "Mortal Kombat 11",
-  "category": "xbox one",
-  "price": "900",
-  "description": "Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd, Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd",
-  "image": "default-image.png",
-  "discount": 0
- },
- {
-  "id": 9,
-  "name": "Mortal Kombat 11",
-  "category": "xbox one",
-  "price": "900",
-  "description": "Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd, Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd",
-  "image": "default-image.png",
-  "discount": 0
  }
 ]

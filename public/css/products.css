@@ -6,11 +6,12 @@
     color: white;
 }
 .all-products{
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 /* .all-products::after {
     content: "";
     flex: auto;
@@ -57,8 +58,14 @@
     /* MAIN */ 
     .main-products{
         padding: 0px 35px;
-    }
+    } 
     .main-products section article{
-        width: 14%;
+        width: 14.5%;
     }
+/*     .all-products article{
+        flex: 0 0 16%; //space between products //test for last row in all products
+    }
+    .all-products article:not(:nth-child(6n+1)) {
+            margin-left: calc( (100% - (16% * 6)) / 5 );          //  added
+    } */
 }
