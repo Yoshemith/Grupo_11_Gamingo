@@ -16,7 +16,11 @@
         </div>
         <div class="formularios">      
             <div class="form2"> 
-                <form action="/" method="GET">
+                <form action="/register" method="POST" enctype="multipart/form-data">
+                    <div class="input-form">
+                        <label>Imagen de Perfil*</label>
+                        <input type="file" name="imagenUsuario">
+                    </div>
                     <div class="input-form">
                         <label for="nombre">Nombre(s)*</label>
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>

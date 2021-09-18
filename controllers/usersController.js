@@ -10,6 +10,9 @@ const usersControlador = {
     change: (req, res) => {
         res.render('./users/changePass');
     },
+    saveRegister: (req, res) => {
+        
+    },
 };
 
 module.exports = usersControlador;

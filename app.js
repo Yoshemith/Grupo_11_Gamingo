@@ -31,3 +31,6 @@ let port = process.env.PORT || 3000;
 //Levantando el servidor
 app.listen(port, () => console.log('Server running at port 3000'));
 
+app.use((req, res, next) => {
+    res.status(404).render('./main/not-found');
+})
