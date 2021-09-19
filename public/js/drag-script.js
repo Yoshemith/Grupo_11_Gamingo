@@ -2,7 +2,7 @@ const dragContainer = document.querySelector('.container');
 const dragText = document.querySelector('.drag-header');
 
 const button = document.querySelector('.browse-button');
-const input = document.querySelector('.drag-area input');
+const input = document.querySelector('#product-image');
 const inputId = document.getElementById('product-image');
 
 let file;

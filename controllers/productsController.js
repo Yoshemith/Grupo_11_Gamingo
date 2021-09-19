@@ -35,7 +35,7 @@ const productsControlador = {
         res.render('./products/createProduct');
     },
     store: (req, res) => {
-        console.log(req.files);
+        console.log(req.file);
         let upImage; 
 		if(req.file){
 			upImage = req.file.filename;

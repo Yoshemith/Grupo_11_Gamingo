@@ -43,6 +43,9 @@
     text-decoration: none;
     color: #C77C91;
 }
+.ver-mas a:hover{
+    color: var(--verdeagua);
+}
 .products{
     display: flex;
     flex-direction: row;

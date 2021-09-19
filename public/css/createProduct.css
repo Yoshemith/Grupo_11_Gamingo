@@ -167,7 +167,7 @@ form.create-form{
     color: gray;
     margin:  10px 0 15px 0;
 }
-.drag-area input{
+#product-image{
     display: none;
 }
 .drag-area .browse-button{

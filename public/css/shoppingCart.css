@@ -168,6 +168,11 @@
 .button-payref i{
     padding-right: 10px;
 }
+.button-payref button:hover{
+    background-color: #0084CC;
+    border-color: #0084CC;
+    color: #fff;
+}
 .text-payref{
     margin-top: 10px;
     margin-bottom: 20px; 
@@ -187,6 +192,9 @@
     padding-left: 10px;
   /*   border: solid 1px yellow; */
     margin-top: 5px;
+}
+.text-payref a:hover{
+    color: #C77C91;
 }
 .web-info article{
     margin: auto;
@@ -326,7 +334,6 @@
         margin-left: auto;
         width: 30%;
         height: 65px;
-        
     }
     .text-payref a{
         justify-content: flex-end;
