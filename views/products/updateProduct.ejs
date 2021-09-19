@@ -26,41 +26,74 @@
                     <h3>Editar producto</h3>
                 </div>
                 <div class="formulario-update">
-                    <form action="/" method="get" class="create-form">
+                    <form action="/products/<%= resultado[0].id%>/edit?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
                         <div class="control-form" >
                             <label for="nombreProducto">Nombre del producto</label>
-                            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Ingresa nombre del producto" minlength="5" class="control" required>
+                            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Ingresa nombre del producto" minlength="5" class="control" value="<%= resultado[0].name%>" required>
                         </div>
                         <div class="control-form">
                             <label for="categoria">Categoria</label>
                             <select name="categoria" id="categoria" aria-placeholder="-Selecciona categoria-">
-                                <option value="switch">SWITCH</option>
-                                <option value="xbox-one">XBOX ONE</option>
-                                <option value="xbox-360">XBOX 360</option>
-                                <option value="ps5">PS5</option>
-                                <option value="ps4">PS4</option>
+                                <% switch (resultado[0].category) {
+                                    case 'switch': %>
+                                    <option value="switch">SWITCH</option>
+                                    <option value="xbox-one">XBOX ONE</option>
+                                    <option value="xbox-360">XBOX 360</option>
+                                    <option value="ps5">PS5</option>
+                                    <option value="ps4">PS4</option>
+                                        <% break; 
+                                    case 'xbox-one': %>
+                                    <option value="xbox-one">XBOX ONE</option>
+                                    <option value="xbox-360">XBOX 360</option>
+                                    <option value="ps5">PS5</option>
+                                    <option value="ps4">PS4</option>
+                                    <option value="switch">SWITCH</option>
+                                        <% break; 
+                                    case 'xbox-360': %>
+                                    <option value="xbox-360">XBOX 360</option>
+                                    <option value="xbox-one">XBOX ONE</option>
+                                    <option value="ps5">PS5</option>
+                                    <option value="ps4">PS4</option>
+                                    <option value="switch">SWITCH</option>
+                                    <% break; 
+                                    case 'ps5': %>
+                                    <option value="ps5">PS5</option>
+                                    <option value="ps4">PS4</option>
+                                    <option value="switch">SWITCH</option>
+                                    <option value="xbox-360">XBOX 360</option>
+                                    <option value="xbox-one">XBOX ONE</option>
+                                    <% break; 
+                                    case 'ps4': %>
+                                    <option value="ps4">PS4</option>
+                                    <option value="ps5">PS5</option>
+                                    <option value="switch">SWITCH</option>
+                                    <option value="xbox-360">XBOX 360</option>
+                                    <option value="xbox-one">XBOX ONE</option>
+                                    <% break; 
+                                    default: break; }%>
+                                
                             </select>
                 
                         </div>
                         <div class="control-form">
                             <label for="precio">Precio</label>
-                            <input type="number" name="precio" id="precio" placeholder="Ingresa una cantidad" class="control" required>
+                            <input type="number" name="precio" id="precio" placeholder="Ingresa una cantidad" class="control" value="<%= resultado[0].price%>" required>
                         </div>
                         <div class="control-form">
                             <label for="descripcion">Descripcion</label>
-                            <textarea name="descripcion" id="descripcion" cols="20" rows="6" placeholder="Escriba una descripcion del producto" required></textarea>
+                            <textarea name="descripcion" id="descripcion" cols="20" rows="6" placeholder="Escriba una descripcion del producto" required><%= resultado[0].description%></textarea>
                         </div>
                         <div class="control-form">
                             <label for="imagen">Imagen del producto</label>
                             <div class="img-product">
                                 <div class="product-img">
-                                    <img src="/img/item-2.png" alt="Imagen del producto">
+                                    <img src="/img/products/<%= resultado[0].image %>" alt="Imagen del producto">
                                 </div>
                                 <div class="link-update">
-                                    <a href="updateProduct">Editar</a>
+                                    <a href="#">Editar</a>
                                 </div>
                             </div>
-                            <input type="file" name="imagen" id="imagen" placeholder="Ingresa una Imagen" class="control" >
+                            <input type="file" name="product-image" id="product-image" placeholder="Ingresa una Imagen" class="control" >
                         </div>
                         <div class="control-buttons">
                             <div class="create-button">

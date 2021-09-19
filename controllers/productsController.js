@@ -15,7 +15,21 @@ const productsControlador = {
 		});
     },
     detail: (req, res) => {
-        res.render('./products/productDetail');
+        let juegoBuscado = req.params.idProduct;
+        let archivoProducto = fs.readFileSync('./data/products.json', {encoding: 'utf-8'});
+        let producto;
+        if (archivoProducto == ""){
+            producto = [];
+        }else{
+            producto = JSON.parse(archivoProducto);
+        }
+        let resultado =[];
+        for(let i=0; i < producto.length; i++){
+            if (producto[i].id == juegoBuscado){
+                resultado.push(producto[i]);
+            }
+        }
+        res.render('./products/productDetail', {resultado: resultado})
     },
     create: (req, res) => {
         res.render('./products/createProduct');
@@ -39,10 +53,54 @@ const productsControlador = {
 		res.redirect('/products');
     },
     edit: (req, res) => {
-        res.render('./products/updateProduct');
+        let juegoId = req.params.idProduct;
+        let archivoProducto = fs.readFileSync('./data/products.json', {encoding: 'utf-8'});
+        let producto;
+        if (archivoProducto == ""){
+            producto = [];
+        }else{
+            producto = JSON.parse(archivoProducto);
+        }
+        let resultado =[];
+        for(let i=0; i < producto.length; i++){
+            if (producto[i].id == juegoId){
+                resultado.push(producto[i]);
+            }
+        }
+        res.render('./products/updateProduct', {resultado: resultado})
     },
     update: (req, res) => {
-        
+        let archivoProducto = fs.readFileSync('./data/products.json', {encoding: 'utf-8'});
+        let producto;
+            if (archivoProducto == ""){
+                producto = [];
+            }else{
+                producto = JSON.parse(archivoProducto);
+            }
+        let juegoId = req.params.idProduct;
+            if(req.file){
+                for(let i=0; i < producto.length; i++){
+                    if (producto[i].id == juegoId){
+                        producto[i].name = req.body.nombreProducto;
+                        producto[i].category = req.body.categoria;
+                        producto[i].price = req.body.precio;
+                        producto[i].description = req.body.descripcion;
+                        producto[i].image = req.file.filename;
+                    }
+                }
+            }else{
+                for(let i=0; i < producto.length; i++){
+                    if (producto[i].id == juegoId){
+                        producto[i].name = req.body.nombreProducto;
+                        producto[i].category = req.body.categoria;
+                        producto[i].price = req.body.precio;
+                        producto[i].description = req.body.descripcion;
+                    }
+                }
+            }
+        productoJSON = JSON.stringify(producto,null,2);
+        fs.writeFileSync('./data/products.json', productoJSON);
+        res.redirect('/')
     },
     destroy: (req, res) => {
         

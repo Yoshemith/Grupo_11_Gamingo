@@ -27,14 +27,14 @@ router.get('/create', productsController.create);
 router.post('/', upload.single('product-image'), productsController.store);  //still file missing even with fileUpload.array
 
 /*** DETAILS PRODUCT ***/ 
-router.get('/:id/', productsController.detail); 
+router.get('/:idProduct/', productsController.detail); 
 
 /*** EDIT PRODUCT ***/ 
-router.get('/:id/edit', productsController.edit); 
-router.put('/:id', productsController.update); 
+router.get('/:idProduct/edit', productsController.edit); 
+router.put('/:idProduct/edit', upload.single('product-image'), productsController.update); 
 
 /*** DELETE PRODUCT***/ 
-router.delete('/:id', productsController.destroy); 
+router.delete('/:idProduct', productsController.destroy); 
 
 
 module.exports = router;

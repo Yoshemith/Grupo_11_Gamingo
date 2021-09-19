@@ -5,29 +5,35 @@
     <%- include('../partials/header.ejs') %>
 
     <main>
+        <% for (let i=0; i < resultado.length; i++){ %>
+        
 
         <article class="nombre-producto-consola">
-            <h1>Nombre del Producto</h1>
-            <a href="#" class="consola">PS4</a>
+            <h1><%= resultado[i].name %></h1>
+            <a href="#" class="consola"><%= resultado[i].category %></a>
         </article>
 
         <section class="detalles-producto">
             <div class="imagen-juego">
-
+                <img src="/img/products/<%= resultado[i].image %>" alt="">
             </div>
         <article class="datos">
             <div class="calif">
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
             </div>
             <div class="precios">
-            <p class="precio-final">$49.50</p>
-            <p class="precio-tachado">$52.00</p>
+                <% if(resultado[i].discount == 0) { %>
+                    <p class="precio-final">$<%= resultado[i].price%></p>
+                <% }else{ %>
+                    <p class="precio-final">$<%= (resultado[i].price/100)*(100-resultado[i].discount)%></p>
+                    <p class="precio-tachado">$<%= resultado[i].price%></p>
+                <% } %>
             </div>
-            <p class="detalles">Vivamus at sodales ligula. Donec interdum nulla luctus purus porttitor fermentum. Phasellus bibendum odio eget mauris accumsan, a suscipit lectus porta. Suspendisse potenti. </p>
+            <p class="detalles"><%= resultado[i].description%> </p>
             <div class="cantidad">
                 <label for="id_form-0-quantity"><b>Cantidad:</b></label>
                 <input class="cantidad" id="id_form-0-quantity" min="1" name="form-0-cantidad" value="1" type="number">
@@ -45,6 +51,7 @@
                 <li>Nulla eget libero ut mi congue viverra.</li>
             </ul>
         </section>
+        <% } %>
         
         <section class="best-sellers-shopping">
             <div class="tags">
