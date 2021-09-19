@@ -22,14 +22,11 @@ app.use(rutasUsers);
 const rutasProducts = require('./routers/products');
 app.use('/products', rutasProducts);
 
-//Confifiguracion EJS como template engine
+//Confifiguracion EJS como template engine & Puerto default o 3000
 app.set('view engine', 'ejs');
-
-//Puerto default o 3000
 let port = process.env.PORT || 3000;
 
-//Levantando el servidor
-app.listen(port, () => console.log('Server running at port 3000'));
+app.listen(port, () => console.log('Server running at port 3000')); //Levantando el servidor
 
 app.use((req, res, next) => {
     res.status(404).render('./main/not-found');
