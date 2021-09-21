@@ -24,7 +24,7 @@ router.get('/', productsController.index);
 
 /*** CREATE PRODUCT ***/ 
 router.get('/create', productsController.create); 
-router.post('/', upload.single('product-image'), productsController.store);  //still file missing even with fileUpload.array
+router.post('/', upload.single('product-image'), productsController.store);  //file missing with d&d evenfileUpload.array
 
 /*** DETAILS PRODUCT ***/ 
 router.get('/:idProduct/', productsController.detail); 

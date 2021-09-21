@@ -212,9 +212,15 @@ form.create-form{
     background-color: #323434;
 }
 
-.control-buttons button:hover{
- background-color: #0022AA; 
+.create-button button:hover{
+ background-color: #0084CC;
  color: white;  
+}
+
+.cancel-button button:hover{
+    background-color: #912644;
+    color: black;  
+    font-weight: bold;
 }
 
 @media (min-width: 481px) { 
