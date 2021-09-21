@@ -24,31 +24,70 @@
     <form action="/products" method="POST" class="create-form" enctype="multipart/form-data">
         <div class="control-form" >
             <label for="name">Nombre del producto</label>
-            <input type="text" name="name" id="name" placeholder="Ingresa nombre del producto" minlength="5" class="control" required>
+            <input 
+                type="text" 
+                name="name" 
+                id="name" 
+                placeholder="Ingresa nombre del producto" 
+                class="control <%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                value="<%= locals.oldData ? oldData.name : null %>"
+            >
+            <!-- The 'is-invalid' class added tag is not working for adding icon -->
+            <% if(locals.errors && errors.name) { %>
+                <div class="text-danger">
+                        <p><%= errors.name.msg %></p>
+                </div>
+            <% } %>
         </div>
         <div class="control-form">
+            <% 
+                let categories = ['SWITCH', 'XBOX ONE', 'XBOX 360', 'PS5', 'PS4'];
+            %>
             <label for="category">Categoria</label>
-            <select name="category" id="category" required>
+            <select name="category" id="category" >
                 <option value="" disabled selected hidden>-Selecciona categoria-</option>
-                <option value="switch">SWITCH</option>
-                <option value="xbox one">XBOX ONE</option>
-                <option value="xbox 360">XBOX 360</option>
-                <option value="ps5">PS5</option>
-                <option value="ps4">PS4</option>
+                <% for(const aCategory of categories) {%>
+                    <option 
+                        value="<%= aCategory %>"
+                        <%= locals.oldData && (aCategory === oldData.category ? 'selected' : null ) %>
+                    > <%= aCategory %> </option>
+                <% } %>
             </select>
-
+            <% if(locals.errors && errors.category) { %>
+                <div class="text-danger">
+                        <p><%= errors.category.msg %></p>
+                </div>
+            <% } %>
         </div>
         <div class="control-form">
             <label for="price">Precio</label>
-            <input type="number" name="price" id="price" placeholder="Ingresa una cantidad" class="control" required>
+            <input 
+                type="number" 
+                name="price" 
+                id="price" 
+                placeholder="Ingresa una cantidad" 
+                class="control" 
+                value="<%= locals.oldData ? oldData.price : null %>"
+            >
+            <% if(locals.errors && errors.price) { %>
+                <div class="text-danger">
+                        <p><%= errors.price.msg %></p>
+                </div>
+            <% } %>
         </div>
         <div class="control-form">
             <label for="description">Descripcion</label>
-            <textarea name="description" id="description" cols="20" rows="6" placeholder="Escriba una descripcion del producto" required></textarea>
+            <textarea name="description" id="description" 
+                cols="20" rows="6" placeholder="Escriba una descripcion del producto" 
+            ><% if(locals.oldData){ %><%= oldData.description %><% } %></textarea>
+            <% if(locals.errors && errors.description) { %>
+                <div class="text-danger">
+                        <p><%= errors.description.msg %></p>
+                </div>
+            <% } %>
         </div>
         <div class="control-form-container">
             <label for="container">Imagen del producto</label>
-            
             <div class="container">
                 <div class="drag-area">
                     <div class="drag-icon">
@@ -63,7 +102,12 @@
                     </span>
                 </div>
             </div>
-            <input type="file" name="product-image" id="product-image">
+            <input type="file" name="productImage" id="productImage">
+            <% if(locals.errors && errors.productImage) { %>
+                <div class="text-danger">
+                        <p><%= errors.productImage.msg %></p>
+                </div>
+            <% } %>
         </div>
         <div class="control-buttons">
             <div class="create-button">

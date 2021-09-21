@@ -2,8 +2,8 @@ const dragContainer = document.querySelector('.container');
 const dragText = document.querySelector('.drag-header');
 
 const button = document.querySelector('.browse-button');
-const input = document.querySelector('#product-image');
-const inputId = document.getElementById('product-image');
+const input = document.querySelector('#productImage');
+const inputId = document.getElementById('productImage');
 
 let file;
 
@@ -19,7 +19,7 @@ input.addEventListener('change', function(){
     file = inputId.file;//this.files[0];
     dragContainer.classList.add('active');
     displayFile();
-    console.log(inputId.file);
+    console.log(inputId.file.type);
 });
 
 //when file is inside the drag area
@@ -49,7 +49,7 @@ dragContainer.addEventListener('drop', (event) => {
     /* console.log(file); */
     displayFile();
     /* console.log('File is dropped in the drag area'); */ 
-    console.log(inputId.file);
+    console.log(inputId.file.type);
 });
 
 function displayFile(){

@@ -1,6 +1,7 @@
 const { SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG } = require('constants');
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -36,22 +37,32 @@ const productsControlador = {
         res.render('./products/createProduct');
     },
     store: (req, res) => {
+        console.log(req.body);
         console.log(req.file);
-        let upImage; 
-		if(req.file){
-			upImage = req.file.filename;
-		}else{
-			upImage = 'default-image.png';
-		}
-		let newProduct = {
-            id: products[products.length - 1].id + 1,
-			...req.body,
-			image: upImage,
-            discount: 0
-		};
-		products.push(newProduct);
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		res.redirect('/products');
+        const resultValidation = validationResult(req);
+        console.log(resultValidation);
+        if(resultValidation.errors.length > 0){
+            return res.render('./products/createProduct', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            });
+        }else{
+            let upImage; 
+            if(req.file){
+                upImage = req.file.filename;
+            }else{
+                upImage = 'default-image.png';
+            }
+            let newProduct = {
+                id: products[products.length - 1].id + 1,
+                ...req.body,
+                image: upImage,
+                discount: 0
+            };
+            products.push(newProduct);
+            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+            res.redirect('/products');
+        }
     },
     edit: (req, res) => {
         let juegoId = req.params.idProduct;
