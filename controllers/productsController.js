@@ -1,3 +1,4 @@
+const { SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG } = require('constants');
 const fs = require('fs');
 const path = require('path');
 
@@ -103,7 +104,11 @@ const productsControlador = {
         res.redirect('/')
     },
     destroy: (req, res) => {
-        
+        let juegoId = req.params.idProduct;
+        let finalProducts = products.filter(producto => producto.id != juegoId);
+        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null,' '));
+        res.render('./products/updateProduct');
+
     }
 };
 
