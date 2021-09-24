@@ -115,11 +115,17 @@ const productsControlador = {
         res.redirect('/')
     },
     destroy: (req, res) => {
-        let juegoId = req.params.idProduct;
-        let finalProducts = products.filter(producto => producto.id != juegoId);
-        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null,' '));
-        res.render('./products/updateProduct');
-
+        //testing new code -- seems working like charm
+        let id = req.params.idProduct;
+		const productToDelete = products.findIndex(producto => id == producto.id);
+		if(productToDelete >= 0){
+			products.splice(productToDelete, 1);
+			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2), 'utf-8')
+			res.redirect('/products');
+		}
+		else{
+			res.redirect('/products');
+		}
     }
 };
 
