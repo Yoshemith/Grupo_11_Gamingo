@@ -6,7 +6,7 @@
   "price": 800,
   "description": "Videojuego Luigi Mansion 3a Edicion para Nintendo Switch 2021 lorem ipsum lorem ipsum xd xd",
   "image": "default-image.png",
-  "discount": 0
+  "discount": 50
  },
  {
   "id": 2,
@@ -15,7 +15,7 @@
   "price": 500,
   "description": "Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd Videojuego Generico lorem ipsum xd",
   "image": "default-image.png",
-  "discount": 0
+  "discount": 10
  },
  {
   "id": 3,

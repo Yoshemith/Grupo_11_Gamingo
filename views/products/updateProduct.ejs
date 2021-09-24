@@ -134,7 +134,7 @@
                         </div>
                         <div class="link-update2">
                             <a href="updateProduct">Editar</a>
-                            <form action="/products/delete/<%= product.id %>" method="POST" >
+                            <form action="/products/delete/<%= resultado[0].id %>?_method=DELETE" method="POST" >
                                 <button type="submit" class="action-button delete">ELIMINAR</button>
                             </form>
                         </div>
