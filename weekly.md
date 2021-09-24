@@ -17,3 +17,14 @@ los impedimentos encontrados y las soluciones propuestas indicando los integrant
     ● Qué va a hacer hoy.
         -Finalizar la vista de cracion del producto
         -Organizacion de los controladores
+        
+## Sprint 4
+> Semana:
+    ● Qué hizo ayer.
+        -Se integró archivos products.json y users.json con datos de productos y usuarios
+        -Se integró administración completa de productos con: listado / detalle / creación / edición / eliminación
+    ● Si se encontró con algún impedimento.
+        -Acción de borrado
+    ● Qué va a hacer hoy.
+        -Finalizar la vista de edición del producto
+        -Últimos ajustes y cambios 
