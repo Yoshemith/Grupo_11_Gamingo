@@ -116,10 +116,21 @@ const productsControlador = {
     },
     destroy: (req, res) => {
         let juegoId = req.params.idProduct;
-        let finalProducts = products.filter(producto => producto.id != juegoId);
-        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null,' '));
-        res.render('./products/updateProduct');
-
+        let archivoProducto = fs.readFileSync('./data/products.json', {encoding: 'utf-8'});
+        let producto;
+            if (archivoProducto == ""){
+                producto = [];
+            }else{
+                producto = JSON.parse(archivoProducto);
+            }
+        for(let i=0; i < producto.length; i++){
+            if (producto[i].id == juegoId){
+                producto.splice(i,1);
+            }
+        }
+        productoJSON = JSON.stringify(producto,null,2);
+        fs.writeFileSync('./data/products.json', productoJSON);
+        res.redirect('/');
     }
 };
 

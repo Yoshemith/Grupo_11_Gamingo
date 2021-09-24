@@ -100,11 +100,18 @@
                             <div class="create-button">
                                 <button type="submit">GUARDAR CAMBIOS</button>
                             </div>
-                            <div class="cancel-button">
-                                <button type="reset">CANCELAR</button>
-                            </div>
                         </div>
                     </form>
+                    <div class="cancel-delete">
+                        <div class="cancel-button">
+                            <button type="reset">CANCELAR</button>
+                        </div>
+                        <div class="cancel-button">
+                            <form action="/products/<%= resultado[0].id%>/delete?_method=DELETE" method="POST" >
+                                <button type="submit">ELIMINAR</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="view-products">
@@ -134,9 +141,7 @@
                         </div>
                         <div class="link-update2">
                             <a href="updateProduct">Editar</a>
-                            <form action="/products/delete/<%= resultado[0].id %>?_method=DELETE" method="POST" >
-                                <button type="submit" class="action-button delete">ELIMINAR</button>
-                            </form>
+                            
                         </div>
                     </div>
                 </div>

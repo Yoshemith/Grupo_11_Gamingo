@@ -81,8 +81,10 @@
     color: #0CF2C9;
     letter-spacing: 1px;
 }
-.add-product h3{
-    
+.cancel-delete{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .product{
     margin: 20px;
