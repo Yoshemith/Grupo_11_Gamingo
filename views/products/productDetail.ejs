@@ -38,7 +38,13 @@
                 <label for="id_form-0-quantity"><b>Cantidad:</b></label>
                 <input class="cantidad" id="id_form-0-quantity" min="1" name="form-0-cantidad" value="1" type="number">
             </div>
-            <button class="button-principal" type="submit">AGREGAR A CARRITO</button>
+            <button class="button-principal">AGREGAR A CARRITO</button>
+            <p style="margin-top: 4px;"></p>
+            <a href="/products/<%=resultado[i].id%>/edit" class="link-modificar-a"><button class="button-modificar">MODIFICAR</button></a>
+            <p style="margin-top: 4px;"></p>
+            <form action="/products/delete/<%= resultado[i].id %>?_method=DELETE" method="POST">
+                <button class="button-eliminar" type="submit">ELIMINAR</button>
+            </form>
         </article>
         </section>
 

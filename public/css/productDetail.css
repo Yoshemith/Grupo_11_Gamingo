@@ -170,18 +170,54 @@ article.nombre-producto-consola {
     padding-right: 32px;
 }
 
-
-button {
+.button-principal {
     background-color: #70EECA;
     border: solid 1px #70EECA;
-
-}
-
-.button-principal {
     padding: 16px 32px;
     border-radius: 15px;
     display: block;
     margin: auto;
+}
+
+.button-modificar, .button-eliminar {
+/*     background-color: #70EECA;
+    border: solid 1px #70EECA; */
+    padding: 16px 32px;
+    border-radius: 15px;
+    margin: 0 10px;
+    display: block;
+    margin: auto;
+}
+
+.button-modificar{
+    background-color: yellow;
+    border: solid 1px yellow;
+}
+
+.button-eliminar{
+    background-color: #de0606;
+    border: solid 1px #de0606;
+}
+
+.button-principal:hover{
+    background-color: #0084CC;
+    border-color: #0084CC;
+    color: white;  
+}
+
+.button-modificar:hover{
+    background-color: #c1c104;
+    border-color: #c1c104;
+    color: white;  
+}
+.link-modificar-a{
+    text-decoration: none;
+}
+.button-eliminar:hover{
+    background-color: #7e0527;
+    border-color: #7e0527;
+    color: black;  
+    font-weight: bold;
 }
 
 

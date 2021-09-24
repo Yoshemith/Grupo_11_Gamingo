@@ -115,22 +115,17 @@ const productsControlador = {
         res.redirect('/')
     },
     destroy: (req, res) => {
-        let juegoId = req.params.idProduct;
-        let archivoProducto = fs.readFileSync('./data/products.json', {encoding: 'utf-8'});
-        let producto;
-            if (archivoProducto == ""){
-                producto = [];
-            }else{
-                producto = JSON.parse(archivoProducto);
-            }
-        for(let i=0; i < producto.length; i++){
-            if (producto[i].id == juegoId){
-                producto.splice(i,1);
-            }
-        }
-        productoJSON = JSON.stringify(producto,null,2);
-        fs.writeFileSync('./data/products.json', productoJSON);
-        res.redirect('/');
+        //testing new code -- seems working like charm
+        let id = req.params.idProduct;
+		const productToDelete = products.findIndex(producto => id == producto.id);
+		if(productToDelete >= 0){
+			products.splice(productToDelete, 1);
+			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2), 'utf-8')
+			res.redirect('/products');
+		}
+		else{
+			res.redirect('/products');
+		}
     }
 };
 

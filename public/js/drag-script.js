@@ -4,12 +4,16 @@ const dragText = document.querySelector('.drag-header');
 const button = document.querySelector('.browse-button');
 const input = document.querySelector('#productImage');
 const inputId = document.getElementById('productImage');
-
+const dragArea = document.querySelector('.drag-area');
 let file;
 
-button.onclick = () => {
+
+dragArea.onclick = () => {
     input.click();
 }
+/* button.onclick = () => {
+    input.click();
+} */
 //when browse
 input.addEventListener('change', function(){
     //inputId.files = this.files; //prueba para ver si guarda la imagen
@@ -23,22 +27,22 @@ input.addEventListener('change', function(){
 });
 
 //when file is inside the drag area
-dragContainer.addEventListener('dragover', (event) => {
+/* dragContainer.addEventListener('dragover', (event) => {
     event.preventDefault();
     dragText.textContent = 'Suelta para cargar';
     dragContainer.classList.add('active');
-    /* console.log('File is inside the drag area'); */
-});
+    //console.log('File is inside the drag area');
+}); */
 
 //when file leaves the drag area
-dragContainer.addEventListener('dragleave', () => {
+/* dragContainer.addEventListener('dragleave', () => {
     dragText.textContent = 'Arrastra y suelta';
     dragContainer.classList.remove('active');
-    /* console.log('File left the drag area'); */
-});
+    // console.log('File left the drag area');
+}); */
 
 //when the file is dropped in the drag area
-dragContainer.addEventListener('drop', (event) => {
+/* dragContainer.addEventListener('drop', (event) => {
     event.preventDefault();
 
     //inputId.files = event.dataTransfer.files; //prueba para ver si guarda la imagen
@@ -46,11 +50,11 @@ dragContainer.addEventListener('drop', (event) => {
     console.log(inputId.file);
 
     file = inputId.file;//event.dataTransfer.files[0];
-    /* console.log(file); */
+    //console.log(file);
     displayFile();
-    /* console.log('File is dropped in the drag area'); */ 
+    //console.log('File is dropped in the drag area'); 
     console.log(inputId.file.type);
-});
+}); */
 
 function displayFile(){
     let filetype = file.type;
