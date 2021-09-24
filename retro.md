@@ -52,3 +52,26 @@
 
     5. Dejar de hacer
         - Por ahora no hay algun inconveniente.
+        
+## Sprint 4
+
+    1. Comenzar a hacer
+        -Definir los campos para los productos/usuarios y generar archivo JSON
+        -CRUD de productos
+
+    2. Hacer más
+        - verificar la administración completa de los productos
+        - revisar errores
+
+    3. Continuar haciendo
+        - La comunicación entre el equipo.
+        - El trabajo en tiempo y forma.
+        - Revisar últimos detalles antes de la entrega
+
+    4. Hacer menos
+        - Por ahora no hay algun inconveniente.
+
+    5. Dejar de hacer
+        - Por ahora no hay algun inconveniente.
+        
+        
