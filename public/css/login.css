@@ -304,6 +304,10 @@ h3{
     width: 100%;
 }
 */
+.errores{
+    color:red;
+    text-align: center;
+}
 
 /* RESPONSIVE */
 @media (min-width: 481px){

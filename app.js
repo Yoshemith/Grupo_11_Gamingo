@@ -6,11 +6,22 @@ const methodOverride =  require('method-override'); // Pasar usar los métodos P
 // ************ express()
 const app = express();
 
+// SESSION
+const session = require('express-session');
+app.use(session({secret: 'Secreto!', resave:false, saveUninitialized:false,}));
+
+// COOKIE
+const cookieParser = require('cookie-parser');
+app.use(cookieParser());
+
 // ************ Middlewares ************
 const publicPath = path.resolve(__dirname, "./public");
 app.use(express.static(publicPath));
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 app.use(express.urlencoded({ extended: false }));
+
+var recordarmeMiddleware = require('./middlewares/recordarmeMiddleware');
+app.use(recordarmeMiddleware);
 
 //requerir rutas
 const rutasMain = require('./routers/main');

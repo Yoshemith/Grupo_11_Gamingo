@@ -1,57 +1,83 @@
 [
-    {
-        "id": 1,
-        "firstname": "Luis",
-        "lastname": "Martínez",
-        "email": "luismartínez@correo.com",
-        "password": "1234567",
-        "category": "admin",
-        "image": "/img/user-profile-beta.png"
-    },
-    {
-        "id": 2,
-        "firstname": "Ana",
-        "lastname": "López",
-        "email": "analopez@correo.com",
-        "password": "1234567",
-        "category": "user",
-        "image": "/img/user-profile-beta.png"
-    },
-    {
-        "id": 3,
-        "firstname": "Jesús",
-        "lastname": "Muñoz",
-        "email": "jesusmunoz@correo.com",
-        "password": "1234567",
-        "category": "admin",
-        "image": "/img/user-profile-beta.png"
-    },
-    {
-        "id": 4,
-        "firstname": "María",
-        "lastname": "González",
-        "email": "mariagonzalez@correo.com",
-        "password": "1234567",
-        "category": "admin",
-        "image": "/img/user-profile-beta.png"
-    },
-    {
-        "id": 5,
-        "firstname": "Pedro",
-        "lastname": "Jimenez",
-        "email": "pedrojimenez@correo.com",
-        "password": "1234567",
-        "category": "user",
-        "image": "/img/user-profile-beta.png"
-    },
-    {
-        "id": 6,
-        "firstname": "Sofía",
-        "lastname": "Luna",
-        "email": "sofialuna@correo.com",
-        "password": "1234567",
-        "category": "admin",
-        "image": "/img/user-profile-beta.png"
-    }
-
+  {
+    "id": "0",
+    "firstname": "Gamingo",
+    "lastname": "Master",
+    "email": "gamingo@hotmail.com",
+    "password": "$2a$10$1mMcSDuMHtdHvPT2NEiIQO1QjW9Fm1e1WnHG65Xh4dLUUp8YPBTT.",
+    "category": "master",
+    "image": "user.png"
+  },
+  {
+    "id": 1,
+    "firstname": "Luis",
+    "lastname": "Martínez",
+    "email": "luismartínez@correo.com",
+    "password": "$2a$10$1mMcSDuMHtdHvPT2NEiIQO1QjW9Fm1e1WnHG65Xh4dLUUp8YPBTT.",
+    "category": "admin",
+    "image": "/img/user-profile-beta.png"
+  },
+  {
+    "id": 2,
+    "firstname": "Ana",
+    "lastname": "López",
+    "email": "analopez@correo.com",
+    "password": "$2a$10$1mMcSDuMHtdHvPT2NEiIQO1QjW9Fm1e1WnHG65Xh4dLUUp8YPBTT.",
+    "category": "user",
+    "image": "/img/user-profile-beta.png"
+  },
+  {
+    "id": 3,
+    "firstname": "Jesús",
+    "lastname": "Muñoz",
+    "email": "jesusmunoz@correo.com",
+    "password": "$2a$10$1mMcSDuMHtdHvPT2NEiIQO1QjW9Fm1e1WnHG65Xh4dLUUp8YPBTT.",
+    "category": "admin",
+    "image": "/img/user-profile-beta.png"
+  },
+  {
+    "id": 4,
+    "firstname": "María",
+    "lastname": "González",
+    "email": "mariagonzalez@correo.com",
+    "password": "$2a$10$1mMcSDuMHtdHvPT2NEiIQO1QjW9Fm1e1WnHG65Xh4dLUUp8YPBTT.",
+    "category": "admin",
+    "image": "/img/user-profile-beta.png"
+  },
+  {
+    "id": 5,
+    "firstname": "Pedro",
+    "lastname": "Jimenez",
+    "email": "pedrojimenez@correo.com",
+    "password": "$2a$10$1mMcSDuMHtdHvPT2NEiIQO1QjW9Fm1e1WnHG65Xh4dLUUp8YPBTT.",
+    "category": "user",
+    "image": "/img/user-profile-beta.png"
+  },
+  {
+    "id": 6,
+    "firstname": "Sofía",
+    "lastname": "Luna",
+    "email": "sofialuna@correo.com",
+    "password": "$2a$10$1mMcSDuMHtdHvPT2NEiIQO1QjW9Fm1e1WnHG65Xh4dLUUp8YPBTT.",
+    "category": "admin",
+    "image": "/img/user-profile-beta.png"
+  },
+  {
+    "id": 7,
+    "firstname": "Ana",
+    "lastname": "Bertha",
+    "email": "ana@hotmail.com",
+    "password": "$2a$10$GL7tCF94v3Gzd7CsMOIYMO9s/4TvUYCQNdgifsoQVyVMyxPRZAu36",
+    "category": "user",
+    "image": "user.png"
+  },
+  {
+    "id": 8,
+    "firstname": "Christian",
+    "lastname": "Gomez",
+    "email": "chris@hotmail.com",
+    "password": "$2a$10$.GgoADtYkpKUGVZ9zF8dIuJJCMJDKKfKhhMhYW/pDL6HLI9yDuaF6",
+    "category": "user",
+    "image": "user.png"
+  }
 ]

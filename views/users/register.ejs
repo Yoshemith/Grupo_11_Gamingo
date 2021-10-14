@@ -23,15 +23,30 @@
                     </div>
                     <div class="input-form">
                         <label for="nombre">Nombre(s)*</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<%= locals.old ? old.nombre : null %>" required>
+                        <% if(locals.errors && errors.nombre){  %>
+                            <div class="errores">
+                                <p><%= errors.nombre.msg %></p>
+                            </div>
+                        <% } %>
                     </div>
                     <div class="input-form">
                         <label for="apellido">Apellidos*</label>
-                        <input type="text" name="apellido" id="apellido" placeholder="Apellidos" required>
+                        <input type="text" name="apellido" id="apellido" placeholder="Apellidos" value="<%= locals.old ? old.apellido : null %>" required>
+                        <% if(locals.errors && errors.apellido){  %>
+                            <div class="errores">
+                                <p><%= errors.apellido.msg %></p>
+                            </div>
+                        <% } %>
                     </div>
                     <div class="input-form">
                         <label for="correo">Correo Electrónico*</label>
-                        <input type="text" name="correo" id="correo" placeholder="tu@correo.com" required>
+                        <input type="text" name="correo" id="correo" placeholder="tu@correo.com" value="<%= locals.old ? old.correo : null %>" required>
+                        <% if(locals.errors && errors.correo){  %>
+                            <div class="errores">
+                                <p><%= errors.correo.msg %></p>
+                            </div>
+                        <% } %>
                     </div>
                     <div class="input-form">
                         <label for="contraseña">Contraseña*</label>
@@ -39,6 +54,11 @@
                         <div class="eye">
                             <i class="fas fa-eye" onclick="funcionContraseña()"></i>
                         </div>
+                        <% if(locals.errors && errors.contraseña){  %>
+                            <div class="errores">
+                                <p><%= errors.contraseña.msg %></p>
+                            </div>
+                        <% } %>
                     </div>
                     <div class="input-form">
                         <div class="campos">
