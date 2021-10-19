@@ -85,8 +85,7 @@ const usersControlador = {
             }
             return res.render('./users/login', {
                 errors: {invalido: {msg: "**Credenciales invalidas, vuelve a intentar**"}
-            }})
-            //res.send('INGRESO EL USUARIO ' + usuarioLogeado.email + ' CORRECTAMENTE');
+            }});
         }
     },
     changePass: (req, res) => {

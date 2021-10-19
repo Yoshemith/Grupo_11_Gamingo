@@ -1,6 +1,8 @@
 let fs = require('fs');
 
 function recordarmeMiddleware(req, res, next){
+    res.locals.isLogged = false;
+    
     let archivoUsuario = fs.readFileSync('./data/users.json', {encoding: 'utf-8'});
     let usuarios;
     if (archivoUsuario == ""){
