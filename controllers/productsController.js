@@ -1,4 +1,3 @@
-const { SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG } = require('constants');
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
@@ -47,12 +46,7 @@ const productsControlador = {
                 oldData: req.body
             });
         }else{
-            let upImage; 
-            if(req.file){
-                upImage = req.file.filename;
-            }else{
-                upImage = 'default-image.png';
-            }
+            let upImage = req.file ? req.file.filename :  'default-image.png'; 
             let newProduct = {
                 id: products[products.length - 1].id + 1,
                 ...req.body,

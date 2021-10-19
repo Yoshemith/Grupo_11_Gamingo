@@ -79,5 +79,32 @@
     "password": "$2a$10$.GgoADtYkpKUGVZ9zF8dIuJJCMJDKKfKhhMhYW/pDL6HLI9yDuaF6",
     "category": "user",
     "image": "user.png"
+  },
+  {
+    "id": 9,
+    "firstname": "Usuario001",
+    "lastname": "random",
+    "email": "Usuario001@gmail.com",
+    "password": "$2a$10$bGft2D97LTQF1Wfn5fmKK.C0k3Oj6phGmai2r3dHbDTeNLesP9TeS",
+    "category": "user",
+    "image": "user.png"
+  },
+  {
+    "id": 10,
+    "firstname": "Usuario002",
+    "lastname": "random2",
+    "email": "Usuario002@gmail.com",
+    "password": "$2a$10$ndQjqqYjrSWcCtyONzn7vOnuxsD51M/m1c41WnRR5oVqJ3o2U9dJK",
+    "category": "user",
+    "image": "user.png"
+  },
+  {
+    "id": 11,
+    "firstname": "Usuario003",
+    "lastname": "random3",
+    "email": "Usuario003@gmail.com",
+    "password": "$2a$10$LOtQ6UehgSyWHyFtDLvnneHqlewRI8FT4dukqvI8eRBNty5y.aLbS",
+    "category": "user",
+    "image": "user.png"
   }
 ]

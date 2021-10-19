@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main class="main-profile">
+        <br><br>
+        <h3>Hola <%= user.firstname %> <%= user.lastname %></h3>
+        <br>
+        <img src="/img/profileImages/<%= user.image %>" alt="" srcset="">
+        <br>
+        <br>
+        <div class="correo">
+            <%= user.email %>
+        </div>
+        <br><br>
+        <div class="logout-button">
+            <a href="/logout"><button>Log out</button></a>
+        </div>
+    </main>
+</body>
+</html>
