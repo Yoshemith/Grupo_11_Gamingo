@@ -69,14 +69,16 @@ const usersControlador = {
             })
         }else{
             let userToLogin = usuarios.find(oneUser => oneUser['email'] === req.body.correo);
+            console.log(userToLogin);
             if(userToLogin){
                 let isValidPassword = bcrypt.compareSync(req.body.contraseña, userToLogin.password);
+                console.log(isValidPassword);
                 if(isValidPassword){
-                    delete userToLogin.password; //borrar propiedad password del usuario logeado en el session
+                    //delete userToLogin.password; //borra propiedad password del usuario logeado en el session
+                    //userToLogin.password = ''; //bug al tratar de borrar el password
                     req.session.usuarioLogeado = userToLogin;
                     if(req.body.recordar){
-                        console.log(req.body.recordar);
-                        res.cookie('recordar', req.body.email, { maxAge: (1000 * 60) * 2}); //seteando cookie 2 minutos
+                        res.cookie('recordar', req.body.correo, { maxAge: (1000 * 60) * 2}); //seteando cookie 2 minutos
                     }
                     return res.redirect('/profile');
                 }
@@ -91,12 +93,11 @@ const usersControlador = {
         res.render('./users/changePass');
     },
     dashboard: (req, res)=>{
-        res.render('./users/profile', {
+        res.render('./users/dashboard', {
             user: req.session.usuarioLogeado
         });
     },
     profile: (req, res)=>{
-        console.log(req.cookies.recordar);
         res.render('./users/profile', {
             user: req.session.usuarioLogeado
         });
