@@ -28,3 +28,16 @@ los impedimentos encontrados y las soluciones propuestas indicando los integrant
     ● Qué va a hacer hoy.
         -Finalizar la vista de edición del producto
         -Últimos ajustes y cambios 
+        
+## Sprint 5
+> Semana:
+    ● Qué hizo ayer.
+        -Rutas de huésped y usuarios
+        -Formularios de login y registro
+    ● Si se encontró con algún impedimento.
+        -ninguno
+    ● Qué va a hacer hoy.
+        -Optimizar código y organización de los controllers
+        -Comparar diseño de diagrama para base de datos
+        -Últimos ajustes y cambios 
+
