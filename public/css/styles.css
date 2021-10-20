@@ -68,6 +68,9 @@ header{
     color: white;
     text-decoration: none;
 }
+.login-ref a:hover, .shopping-cart a:hover, .shopping-cart a p:hover{
+    color: var(--verdeagua);
+}
 .search-container form{
     padding: 10px 0;
     display: flex;
@@ -88,6 +91,9 @@ header{
     margin-top: 2px;
     margin-left: -20px;
 }
+.search-button button:hover{
+    background: lightskyblue;
+}
 .bottom-header{
     width: 100%;
     display: none;
@@ -106,6 +112,9 @@ header{
     color: black;
     font-weight: bold;
     font-size: 14px;
+}
+.link-nav a:hover{
+    color: rgb(49, 112, 175);
 }
 /* yet to check all li in case of bugs */
 li{
