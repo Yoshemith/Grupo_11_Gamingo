@@ -74,4 +74,27 @@
     5. Dejar de hacer
         - Por ahora no hay algun inconveniente.
         
+ ## Sprint 5
+
+    1. Comenzar a hacer
+        -Diseñar diagrama de base de datos
+        -Implementar entidad de usuarios (estructura de archivos y directorios de usuarios)
+        -Implementar registro de usuarios (formulario funcional de creación de usuarios.)
+        -Implementar el login de usuarios (formulario funcional de login)
+        -Implementar rutas de huéspedes y de usuarios
+
+    2. Hacer más
+        - revisar errores
+
+    3. Continuar haciendo
+        - La comunicación entre el equipo.
+        - Cumplir con el trabajo en tiempo y forma.
+        - Revisar últimos detalles antes de la entrega
+
+    4. Hacer menos
+        - Por ahora no hay algun inconveniente.
+
+    5. Dejar de hacer
+        - Por ahora no hay algun inconveniente.
+        
         
