@@ -99,11 +99,11 @@
     "image": "user.png"
   },
   {
-    "id": 11,
-    "firstname": "Usuario003",
-    "lastname": "random3",
-    "email": "Usuario003@gmail.com",
-    "password": "$2a$10$LOtQ6UehgSyWHyFtDLvnneHqlewRI8FT4dukqvI8eRBNty5y.aLbS",
+    "id": 12,
+    "firstname": "Prueba",
+    "lastname": "Prueba",
+    "email": "prueba@hotmail.com",
+    "password": "$2a$10$miz593O9T0gBDssuz/.bpOunLFDooFEQF2XbJDNHO4o10FDvBcu5e",
     "category": "user",
     "image": "user.png"
   }

@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Luigi Mansion 3",
     "category": "switch",
-    "price": 800,
+    "price": "800",
     "description": "Videojuego Luigi Mansion 3a Edicion para Nintendo Switch 2021 lorem ipsum lorem ipsum xd xd",
     "image": "default-image.png",
     "discount": 50
@@ -52,5 +52,5 @@
     "description": "Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd, Videojuego de peleas mortales y artes marciales con superpoderes y nosequemas xd",
     "image": "default-image.png",
     "discount": 0
-   }
+  }
 ]
