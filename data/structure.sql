@@ -14,7 +14,7 @@ name VARCHAR(100) NOT NULL,
 PRIMARY KEY (id_typeUser)
 );
 
-CREATE TABLE categorys(
+CREATE TABLE categories(
 id_category INT NOT NULL AUTO_INCREMENT,
 name VARCHAR(100) NOT NULL,
 PRIMARY KEY (id_category)
@@ -53,7 +53,7 @@ product_image VARCHAR(100) NOT NULL,
 discount INT NOT NULL,
 stock INT NOT NULL,
 PRIMARY KEY (id_product),
-FOREIGN KEY (id_category) REFERENCES categorys(id_category) 
+FOREIGN KEY (id_category) REFERENCES categories(id_category) 
 );
 
 CREATE TABLE sales(

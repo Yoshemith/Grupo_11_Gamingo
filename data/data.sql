@@ -1,10 +1,10 @@
 USE gamingo_db;
 
-INSERT INTO categorys (name) VALUES ('XBOX ONE');
-INSERT INTO categorys (name) VALUES ('XBOX 360');
-INSERT INTO categorys (name) VALUES ('SWITCH');
-INSERT INTO categorys (name) VALUES ('PLAY 4');
-INSERT INTO categorys (name) VALUES ('PLAY 5');
+INSERT INTO categories (name) VALUES ('XBOX ONE');
+INSERT INTO categories (name) VALUES ('XBOX 360');
+INSERT INTO categories (name) VALUES ('SWITCH');
+INSERT INTO categories (name) VALUES ('PLAY 4');
+INSERT INTO categories (name) VALUES ('PLAY 5');
 
 INSERT INTO payment_types (name) VALUES ('PAYPAL');
 INSERT INTO payment_types (name) VALUES ('TARJETA DE DEBITO');
