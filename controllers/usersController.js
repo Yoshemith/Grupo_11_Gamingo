@@ -1,6 +1,8 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
 
+//Llamar a los modelos
+const User = db.User;
 const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
@@ -13,9 +15,6 @@ if (archivoUsuario == ""){
 }else{
     usuarios = JSON.parse(archivoUsuario);
 }
-
-//llamar a los modelos
-const Movies = db.Movie;
 
 const usersControlador = {
     register: (req, res) => {
@@ -31,35 +30,34 @@ const usersControlador = {
             })
         }else{
             // CHECAMOS EMAIL EXISTENTE
-            let userInDB = usuarios.find(oneUser => oneUser['email'] === req.body.correo);
-            if(userInDB){
-                return res.render('./users/register', {
-                    errors: {
-                        correo: {
-                            msg: 'Este email ya esta registrado'
-                        }
-                    },
-                    old: req.body
-                });
-            }
-            //SET DE LOS VALORES NUEVO USUARIO
-            let upImage = req.file ? req.file.filename :  'user.png'; 
-            let lastUser = usuarios.pop();
-            let newId = lastUser ? lastUser.id + 1 : 1 ; 
-            let newUsuario = {
-                id: newId, //usuarios[usuarios.length - 1].id + 1,
-                firstname: req.body.nombre,
-                lastname: req.body.apellido,
-                email: req.body.correo,
-                password: bcrypt.hashSync(req.body.contraseña, 10),
-                category: 'user',
-                image: upImage
-            };
-            // GUARDAR LA INFORMACION EN JSON
-            usuarios.push(newUsuario);
-            usuariosJSON = JSON.stringify(usuarios,null,2);
-            fs.writeFileSync('./data/users.json', usuariosJSON);
-            res.redirect("/login");
+            let userInDB = null;
+            User.findOne({ raw: true, where: { email: req.body.correo }}).then(data => {
+                userInDB = data;
+                console.log(userInDB);
+                if(userInDB != null || userInDB != undefined){
+                    return res.render('./users/register', {
+                        errors: {
+                            correo: {
+                                msg: 'Este email ya esta registrado'
+                            }
+                        },
+                        old: req.body
+                    });
+                }else{
+                    let upImage = req.file ? req.file.filename :  'user.png'; 
+                    // GUARDAR LA INFORMACION 
+                    User.create({
+                        firstname: req.body.nombre,
+                        lastname: req.body.apellido,
+                        email: req.body.correo,
+                        password: bcrypt.hashSync(req.body.contraseña, 10),
+                        user_image: upImage,
+                        id_typeUser: 3
+                    });
+                    res.redirect("/login");
+                }
+            });
+            console.log("USERINDB-->" +userInDB);
         }
     },
     login: (req, res) => {
