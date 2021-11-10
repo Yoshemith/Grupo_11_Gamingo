@@ -1,39 +1,45 @@
-const fs = require('fs');
-const path = require('path');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
+//llamar a los modelos
+const Product = db.Product;
+const Category = db.Category;
 const { validationResult } = require('express-validator');
-
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
 
 const productsControlador = {
     index: (req, res) => {
-        res.render('./products/products', {
-			products,
-			toThousand
-		});
+        Product.findAll()
+            .then(function(products){
+                res.render('./products/products', {
+                    products: products,
+                    toThousand
+                });
+            })
+            .catch(err => {
+                console.log(err);
+           });
     },
     detail: (req, res) => {
         let juegoBuscado = req.params.idProduct;
-        let archivoProducto = fs.readFileSync('./data/products.json', {encoding: 'utf-8'});
-        let producto;
-        if (archivoProducto == ""){
-            producto = [];
-        }else{
-            producto = JSON.parse(archivoProducto);
-        }
-        let resultado =[];
-        for(let i=0; i < producto.length; i++){
-            if (producto[i].id == juegoBuscado){
-                resultado.push(producto[i]);
-            }
-        }
-        res.render('./products/productDetail', {resultado: resultado})
+        db.Product.findByPk(juegoBuscado, {
+            include: [{association: 'category'}]
+        })
+            .then(function(resultado) {
+                res.render('./products/productDetail', {resultado: resultado})
+            })
+            .catch(err => {
+                console.log(err);
+           });
     },
     create: (req, res) => {
-        res.render('./products/createProduct');
+        Category.findAll()
+            .then(function(categories) {
+                return res.render('./products/createProduct', {categories: categories});
+            })
+            .catch(err => {
+                console.log(err);
+           });
     },
     store: (req, res) => {
         console.log(req.body);
@@ -41,85 +47,73 @@ const productsControlador = {
         const resultValidation = validationResult(req);
         console.log(resultValidation);
         if(resultValidation.errors.length > 0){
-            return res.render('./products/createProduct', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            });
+            Category.findAll()
+            .then(function(categories) {
+                return res.render('./products/createProduct', {
+                    categories: categories,
+                    errors: resultValidation.mapped(),
+                    oldData: req.body
+                });
+            })
+            .catch(err => {
+                console.log(err);
+           });
         }else{
             let upImage = req.file ? req.file.filename :  'default-image.png'; 
-            let newProduct = {
-                id: products[products.length - 1].id + 1,
-                ...req.body,
-                image: upImage,
-                discount: 0
-            };
-            products.push(newProduct);
-            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+            Product.create({
+                name: req.body.name,
+                id_category: req.body.category,
+                price: req.body.price,
+                description: req.body.description,
+                product_image: upImage,
+                discount: 0,
+                stock: 100
+            });
             res.redirect('/products');
         }
     },
     edit: (req, res) => {
         let juegoId = req.params.idProduct;
-        let archivoProducto = fs.readFileSync('./data/products.json', {encoding: 'utf-8'});
-        let producto;
-        if (archivoProducto == ""){
-            producto = [];
-        }else{
-            producto = JSON.parse(archivoProducto);
-        }
-        let resultado =[];
-        for(let i=0; i < producto.length; i++){
-            if (producto[i].id == juegoId){
-                resultado.push(producto[i]);
-            }
-        }
-        res.render('./products/updateProduct', {resultado: resultado})
+        let GameToEdit = Product.findByPk(juegoId,{include: ['category']});
+        let CategoryAll = Category.findAll();
+
+        Promise
+        .all([GameToEdit, CategoryAll])
+            .then(function([resultado, categories]){
+                return res.render('./products/updateProduct', {resultado: resultado, categories: categories})
+            })
+            .catch(err => {
+                console.log(err);
+           });
+
     },
     update: (req, res) => {
-        let archivoProducto = fs.readFileSync('./data/products.json', {encoding: 'utf-8'});
-        let producto;
-            if (archivoProducto == ""){
-                producto = [];
-            }else{
-                producto = JSON.parse(archivoProducto);
-            }
-        let juegoId = req.params.idProduct;
-            if(req.file){
-                for(let i=0; i < producto.length; i++){
-                    if (producto[i].id == juegoId){
-                        producto[i].name = req.body.nombreProducto;
-                        producto[i].category = req.body.categoria;
-                        producto[i].price = req.body.precio;
-                        producto[i].description = req.body.descripcion;
-                        producto[i].image = req.file.filename;
-                    }
+        console.log(req.params)
+        let upImage = req.file ? req.file.filename :  'default-image.png'; 
+            Product.update({
+                name: req.body.name,
+                id_category: req.body.category,
+                price: req.body.price,
+                description: req.body.description,
+                product_image: upImage,
+                discount: 0,
+                stock: 100
+            },{
+                where: {
+                    id_product: req.params.idProduct
                 }
-            }else{
-                for(let i=0; i < producto.length; i++){
-                    if (producto[i].id == juegoId){
-                        producto[i].name = req.body.nombreProducto;
-                        producto[i].category = req.body.categoria;
-                        producto[i].price = req.body.precio;
-                        producto[i].description = req.body.descripcion;
-                    }
-                }
-            }
-        productoJSON = JSON.stringify(producto,null,2);
-        fs.writeFileSync('./data/products.json', productoJSON);
-        res.redirect('/')
+            });
+            res.redirect('/products/' + req.params.idProduct);
     },
     destroy: (req, res) => {
         //testing new code -- seems working like charm
         let id = req.params.idProduct;
-		const productToDelete = products.findIndex(producto => id == producto.id);
-		if(productToDelete >= 0){
-			products.splice(productToDelete, 1);
-			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2), 'utf-8')
-			res.redirect('/products');
-		}
-		else{
-			res.redirect('/products');
-		}
+		Product.destroy({
+            where: { 
+                id_product: id
+            }
+        })
+        res.redirect('/products/');
     }
 };
 

@@ -1,6 +1,3 @@
-const db = require('../database/models');
-const sequelize = db.sequelize;
-
 const path = require('path');
 const fs = require('fs');
 const bcrypt = require('bcryptjs');
@@ -13,9 +10,6 @@ if (archivoUsuario == ""){
 }else{
     usuarios = JSON.parse(archivoUsuario);
 }
-
-//llamar a los modelos
-const Movies = db.Movie;
 
 const usersControlador = {
     register: (req, res) => {

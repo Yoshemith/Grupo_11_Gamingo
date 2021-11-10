@@ -40,17 +40,15 @@
             <% } %>
         </div>
         <div class="control-form">
-            <% 
-                let categories = ['SWITCH', 'XBOX ONE', 'XBOX 360', 'PS5', 'PS4'];
-            %>
+            
             <label for="category">Categoria</label>
             <select name="category" id="category" >
                 <option value="" disabled selected hidden>-Selecciona categoria-</option>
                 <% for(const aCategory of categories) {%>
                     <option 
-                        value="<%= aCategory %>"
-                        <%= locals.oldData && (aCategory === oldData.category ? 'selected' : null ) %>
-                    > <%= aCategory %> </option>
+                        value="<%= aCategory.id_category %>"
+                        <%= locals.oldData && (aCategory.name === oldData.category ? 'selected' : null ) %>
+                    > <%= aCategory.name %> </option>
                 <% } %>
             </select>
             <% if(locals.errors && errors.category) { %>

@@ -26,68 +26,35 @@
                     <h3>Editar producto</h3>
                 </div>
                 <div class="formulario-update">
-                    <form action="/products/<%= resultado[0].id%>/edit?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
+                    <form action="/products/<%= resultado.id_product%>/edit?_method=PUT" method="POST" class="create-form" enctype="multipart/form-data">
                         <div class="control-form" >
-                            <label for="nombreProducto">Nombre del producto</label>
-                            <input type="text" name="nombreProducto" id="nombreProducto" placeholder="Ingresa nombre del producto" minlength="5" class="control" value="<%= resultado[0].name%>" required>
+                            <label for="name">Nombre del producto</label>
+                            <input type="text" name="name" id="name" placeholder="Ingresa nombre del producto" minlength="5" class="control" value="<%= resultado.name%>" required>
                         </div>
                         <div class="control-form">
-                            <label for="categoria">Categoria</label>
-                            <select name="categoria" id="categoria" aria-placeholder="-Selecciona categoria-">
-                                <% switch (resultado[0].category) {
-                                    case 'switch': %>
-                                    <option value="switch">SWITCH</option>
-                                    <option value="xbox-one">XBOX ONE</option>
-                                    <option value="xbox-360">XBOX 360</option>
-                                    <option value="ps5">PS5</option>
-                                    <option value="ps4">PS4</option>
-                                        <% break; 
-                                    case 'xbox-one': %>
-                                    <option value="xbox-one">XBOX ONE</option>
-                                    <option value="xbox-360">XBOX 360</option>
-                                    <option value="ps5">PS5</option>
-                                    <option value="ps4">PS4</option>
-                                    <option value="switch">SWITCH</option>
-                                        <% break; 
-                                    case 'xbox-360': %>
-                                    <option value="xbox-360">XBOX 360</option>
-                                    <option value="xbox-one">XBOX ONE</option>
-                                    <option value="ps5">PS5</option>
-                                    <option value="ps4">PS4</option>
-                                    <option value="switch">SWITCH</option>
-                                    <% break; 
-                                    case 'ps5': %>
-                                    <option value="ps5">PS5</option>
-                                    <option value="ps4">PS4</option>
-                                    <option value="switch">SWITCH</option>
-                                    <option value="xbox-360">XBOX 360</option>
-                                    <option value="xbox-one">XBOX ONE</option>
-                                    <% break; 
-                                    case 'ps4': %>
-                                    <option value="ps4">PS4</option>
-                                    <option value="ps5">PS5</option>
-                                    <option value="switch">SWITCH</option>
-                                    <option value="xbox-360">XBOX 360</option>
-                                    <option value="xbox-one">XBOX ONE</option>
-                                    <% break; 
-                                    default: break; }%>
-                                
+                            <label for="category">Categoria</label>
+                            <select name="category" id="category" >
+                                <% for(const aCategory of categories) {%>
+                                    <option 
+                                        value="<%= aCategory.id_category %>"
+                                        <%= (resultado.category.id_category === aCategory.id_category ? 'selected' : null ) %>
+                                    > <%= aCategory.name %> </option>
+                                <% } %>
                             </select>
-                
                         </div>
                         <div class="control-form">
-                            <label for="precio">Precio</label>
-                            <input type="number" name="precio" id="precio" placeholder="Ingresa una cantidad" class="control" value="<%= resultado[0].price%>" required>
+                            <label for="price">Precio</label>
+                            <input type="number" name="price" id="price" placeholder="Ingresa una cantidad" class="control" value="<%= resultado.price%>" required>
                         </div>
                         <div class="control-form">
-                            <label for="descripcion">Descripcion</label>
-                            <textarea name="descripcion" id="descripcion" cols="20" rows="6" placeholder="Escriba una descripcion del producto" required><%= resultado[0].description%></textarea>
+                            <label for="description">Descripcion</label>
+                            <textarea name="description" id="description" cols="20" rows="6" placeholder="Escriba una descripcion del producto" required><%= resultado.description%></textarea>
                         </div>
                         <div class="control-form">
                             <label for="imagen">Imagen del producto</label>
                             <div class="img-product">
                                 <div class="product-img">
-                                    <img src="/img/products/<%= resultado[0].image %>" alt="Imagen del producto">
+                                    <img src="/img/products/<%= resultado.product_image %>" alt="Imagen del producto">
                                 </div>
                                 <div class="link-update">
                                     <a href="#">Editar</a>
@@ -107,7 +74,7 @@
                             <button type="reset">CANCELAR</button>
                         </div>
                         <div class="cancel-button">
-                            <form action="/products/delete/<%= resultado[0].id%>?_method=DELETE" method="POST" >
+                            <form action="/products/delete/<%= resultado.id_product%>?_method=DELETE" method="POST" >
                                 <button type="submit">ELIMINAR</button>
                             </form>
                         </div>

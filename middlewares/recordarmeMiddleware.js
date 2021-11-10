@@ -1,5 +1,7 @@
 let fs = require('fs');
 
+
+//AQUI REORGANIZAR PARA GAMINGO_DB
 function recordarmeMiddleware(req, res, next){
     res.locals.isLogged = false;
     

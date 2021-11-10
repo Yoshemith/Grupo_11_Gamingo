@@ -48,7 +48,7 @@ id_product INT NOT NULL AUTO_INCREMENT,
 name VARCHAR(100) NOT NULL,
 id_category INT NOT NULL,
 price INT NOT NULL,
-description VARCHAR(100) NOT NULL,
+description VARCHAR(300) NOT NULL,
 product_image VARCHAR(100) NOT NULL,
 discount INT NOT NULL,
 stock INT NOT NULL,
@@ -67,4 +67,4 @@ FOREIGN KEY (id_ticket) REFERENCES  tickets(id_ticket),
 FOREIGN KEY (id_product) REFERENCES products(id_product)
 );
 
-DROP TABLE sales;
+-- DROP TABLE sales;

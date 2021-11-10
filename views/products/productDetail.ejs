@@ -5,17 +5,17 @@
     <%- include('../partials/header.ejs') %>
 
     <main>
-        <% for (let i=0; i < resultado.length; i++){ %>
+        
         
 
         <article class="nombre-producto-consola">
-            <h1><%= resultado[i].name %></h1>
-            <a href="#" class="consola"><%= resultado[i].category %></a>
+            <h1><%= resultado.name %></h1>
+            <a href="#" class="consola"><%= resultado.category.name %></a>
         </article>
 
         <section class="detalles-producto">
             <div class="imagen-juego">
-                <img src="/img/products/<%= resultado[i].image %>" alt="">
+                <img src="/img/products/<%= resultado.product_image %>" alt="">
             </div>
         <article class="datos">
             <div class="calif">
@@ -26,23 +26,23 @@
                 <span class="fa fa-star"></span>
             </div>
             <div class="precios">
-                <% if(resultado[i].discount == 0) { %>
-                    <p class="precio-final">$<%= resultado[i].price%></p>
+                <% if(resultado.discount == 0) { %>
+                    <p class="precio-final">$<%= resultado.price%></p>
                 <% }else{ %>
-                    <p class="precio-final">$<%= (resultado[i].price/100)*(100-resultado[i].discount)%></p>
-                    <p class="precio-tachado">$<%= resultado[i].price%></p>
+                    <p class="precio-final">$<%= (resultado.price/100)*(100-resultado.discount)%></p>
+                    <p class="precio-tachado">$<%= resultado.price%></p>
                 <% } %>
             </div>
-            <p class="detalles"><%= resultado[i].description%> </p>
+            <p class="detalles"><%= resultado.description%> </p>
             <div class="cantidad">
                 <label for="id_form-0-quantity"><b>Cantidad:</b></label>
                 <input class="cantidad" id="id_form-0-quantity" min="1" name="form-0-cantidad" value="1" type="number">
             </div>
             <button class="button-principal">AGREGAR A CARRITO</button>
             <p style="margin-top: 4px;"></p>
-            <a href="/products/<%=resultado[i].id%>/edit" class="link-modificar-a"><button class="button-modificar">MODIFICAR</button></a>
+            <a href="/products/<%=resultado.id_product%>/edit" class="link-modificar-a"><button class="button-modificar">MODIFICAR</button></a>
             <p style="margin-top: 4px;"></p>
-            <form action="/products/delete/<%= resultado[i].id %>?_method=DELETE" method="POST">
+            <form action="/products/delete/<%= resultado.id_product %>?_method=DELETE" method="POST">
                 <button class="button-eliminar" type="submit">ELIMINAR</button>
             </form>
         </article>
@@ -57,7 +57,6 @@
                 <li>Nulla eget libero ut mi congue viverra.</li>
             </ul>
         </section>
-        <% } %>
         
         <section class="best-sellers-shopping">
             <div class="tags">
