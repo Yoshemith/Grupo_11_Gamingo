@@ -3,18 +3,10 @@ const sequelize = db.sequelize;
 
 //Llamar a los modelos
 const User = db.User;
-const path = require('path');
-const fs = require('fs');
+
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-let archivoUsuario = fs.readFileSync('./data/users.json', {encoding: 'utf-8'});
-let usuarios;
-if (archivoUsuario == ""){
-    usuarios = [];
-}else{
-    usuarios = JSON.parse(archivoUsuario);
-}
 
 const usersControlador = {
     register: (req, res) => {
@@ -35,6 +27,7 @@ const usersControlador = {
                 userInDB = data;
                 console.log(userInDB);
                 if(userInDB != null || userInDB != undefined){
+                    //SI EL CORREO ESTA EN LA BD ENTONCES
                     return res.render('./users/register', {
                         errors: {
                             correo: {
@@ -57,7 +50,6 @@ const usersControlador = {
                     res.redirect("/login");
                 }
             });
-            console.log("USERINDB-->" +userInDB);
         }
     },
     login: (req, res) => {
@@ -72,24 +64,23 @@ const usersControlador = {
                 old: req.body
             })
         }else{
-            let userToLogin = usuarios.find(oneUser => oneUser['email'] === req.body.correo);
-            console.log(userToLogin);
-            if(userToLogin){
-                let isValidPassword = bcrypt.compareSync(req.body.contraseña, userToLogin.password);
-                console.log(isValidPassword);
-                if(isValidPassword){
-                    //delete userToLogin.password; //borra propiedad password del usuario logeado en el session
-                    //userToLogin.password = ''; //bug al tratar de borrar el password
-                    req.session.usuarioLogeado = userToLogin;
-                    if(req.body.recordar){
-                        res.cookie('recordar', req.body.correo, { maxAge: (1000 * 60) * 2}); //seteando cookie 2 minutos
+            User.findOne({ raw: true, where: { email: req.body.correo }}).then(userToLogin => {
+                console.log(userToLogin);
+                if(userToLogin != null || userToLogin != undefined){
+                    let isValidPassword = bcrypt.compareSync(req.body.contraseña, userToLogin.password);
+                    //console.log(isValidPassword);
+                    if(isValidPassword){
+                        req.session.usuarioLogeado = userToLogin;
+                        if(req.body.recordar){
+                            res.cookie('recordar', req.body.correo, { maxAge: (1000 * 60) * 2}); //seteando cookie 2 minutos
+                        }
+                        return res.redirect('/profile');
                     }
-                    return res.redirect('/profile');
                 }
-            }
-            return res.render('./users/login', {
-                errors: {invalido: {msg: "**Credenciales invalidas, vuelve a intentar**"}
-            }});
+                return res.render('./users/login', {
+                    errors: {invalido: {msg: "**Credenciales invalidas, vuelve a intentar**"}
+                }});
+            });
         }
     },
     changePass: (req, res) => {
