@@ -49,7 +49,9 @@ const usersControlador = {
                     });
                     res.redirect("/login");
                 }
-            });
+            }).catch(err => {
+                console.log(err);
+           });
         }
     },
     login: (req, res) => {
@@ -80,7 +82,9 @@ const usersControlador = {
                 return res.render('./users/login', {
                     errors: {invalido: {msg: "**Credenciales invalidas, vuelve a intentar**"}
                 }});
-            });
+            }).catch(err => {
+                console.log(err);
+           });
         }
     },
     changePass: (req, res) => {
