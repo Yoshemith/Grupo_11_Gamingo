@@ -1,41 +1,25 @@
-let slider_index= 0;
+const sliderImg = document.querySelector('.slider');
+const sliderButtons = document.querySelector('.slider_btn');
+const numberOfImg = document.querySelector('.slider img').length;
+let imageIndex = 1;
+let translateX = 0;
 
-function show_slide(index){
-    let slides = document.querySelectorAll(".slide");
-    let dots = document.querySelectorAll(".dot-nav");
+sliderButtons.forEach(button=>{
+    button.addEventListener('click', event=>{
+        if (event.target.id === "previous"){
+            if(imageIndex !==1){
+                imageIndex --;
+                translateX += 1312;
+            }
+        } else {
+            if(imageIndex !== numberOfImg){
+                imageIndex ++;
+                translateX -= 1312;
+            }
 
-    if (index > slides.length) slider_index = 0;
-    if(index < 0) slider_index = slides.length -1;
+        }
+        sliderImg.style.transform = `translateX(${translateX}px)`;
 
-    for(let i= 0; i<slides.length; i++){
-        slides[i].style.display = "none";
-        dots[i].classList.remove("active-dot");
-    }
+    });
 
-    slides[slider_index].style.display = "block";
-    dots[slider_index].classList.add("active-dot");
-
-
-}
-
-show_slide(slider_index);
-
-document.querySelector("#arrow-prev").addEventListener("click", ()=>{
-    show_slide(--slider_index);
 });
-
-document.querySelector("#arrow-next").addEventListener("click", ()=>{
-    show_slide(++slider_index);
-});
-
-document.querySelector(".dot-nav").forEach((element)=>{
-    element.addEventListener("click", function(){
-        var dots = Array.prototype.slice.call(this.parentElement.children),
-        dot_index = dots.indexOf(element);
-        show_slide(slider_index = dot_index);
-    })
-});
-
-setInterval(()=>{
-    show_slide(++slider_index)
-}, 2000);
