@@ -15,7 +15,7 @@
         </div>
         <div class="formularios">      
             <div class="form1"> 
-                <form action="/login" method="POST">
+                <form action="/login" method="POST" class="login-for">
                     <div class="input-form">
                         <label for="correo">Correo Electrónico*</label>
                         <input type="text" name="correo" id="correo" placeholder="tu@correo.com" value="<%= locals.old ? old.correo : null %>" required>
@@ -62,5 +62,6 @@
         </div>
     </main>
     <%- include('../partials/footer.ejs') %>
+    <script src="/js/loginValidation.js" type="text/javascript"></script>
 </body>
 </html>
