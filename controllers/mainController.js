@@ -8,6 +8,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
 //llamar a los modelos
 const Product = db.Product;
@@ -23,12 +24,22 @@ const controlador = {
     },
     search: (req, res) => {
         let search = req.query.keywords;
-		let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));	
-		res.render('./main/results', { 
-			products: productsToSearch, 
-			search,
-			toThousand,
-		});
+		Product.findAll({
+            where: {
+                name: {
+                    [Op.substring]: search
+                }
+              }
+        }).then(function(products){
+            res.render('./main/results', { 
+                products: products, 
+                search,
+                toThousand,
+            });
+        })
+        .catch(err => {
+            console.log(err);
+       });
     },
     shopping_cart: (req, res) => {
         res.render('./main/shoppingCart');
