@@ -6,6 +6,12 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
+//llamar a los modelos
+const Product = db.Product;
+
 const controlador = {
     home: (req, res) => {
         //res.sendFile(path.resolve('./views/index.html'));
@@ -16,7 +22,13 @@ const controlador = {
 		});
     },
     search: (req, res) => {
-        res.render('./main/results'); //resultados de busqueda
+        let search = req.query.keywords;
+		let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));	
+		res.render('./main/results', { 
+			products: productsToSearch, 
+			search,
+			toThousand,
+		});
     },
     shopping_cart: (req, res) => {
         res.render('./main/shoppingCart');
@@ -24,3 +36,4 @@ const controlador = {
 };
 
 module.exports = controlador;
+
