@@ -43,7 +43,24 @@ const controlador = {
     },
     shopping_cart: (req, res) => {
         res.render('./main/shoppingCart');
-    }
+    },
+    switch: (req, res) => {
+        res.render('./main/switch');
+    },
+    xboxone: (req, res) => {
+        res.render('./main/xboxone');
+    },
+    xbox360: (req, res) => {
+        res.render('./main/xbox360');
+    
+    },
+    ps5: (req, res) => {
+        res.render('./main/ps5');
+    },
+    ps4: (req, res) => {
+        res.render('./main/ps4');
+}
+
 };
 
 module.exports = controlador;

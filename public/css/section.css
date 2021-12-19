@@ -1,0 +1,24 @@
+/* BANNERS */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.banner-frame{
+    
+    margin-top: 20px;
+
+
+}
+.banner-container {
+    margin: auto;
+}
+.main-shopping{
+    margin-top: 32px;
+}
+.products article{
+    margin-top: 32px;
+}
+
