@@ -59,8 +59,24 @@ const controlador = {
     },
     ps4: (req, res) => {
         res.render('./main/ps4');
-}
-
+    },
+    section: (req, res) => {
+        let id = req.params.idCat;
+        Product.findAll({
+            where: { 
+                id_category: id
+            }
+        })
+            .then(function(products){
+                res.render('./products/products', {
+                    products: products,
+                    toThousand
+                });
+            })
+            .catch(err => {
+                console.log(err);
+           });
+        }
 };
 
 module.exports = controlador;

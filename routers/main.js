@@ -20,5 +20,7 @@ router.get('/shopping-cart', mainController.shopping_cart)
 //RESULTS
 router.get('/search', mainController.search);
 
+router.get('/section/:idCat', mainController.section);
+
 module.exports = router;
 
