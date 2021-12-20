@@ -1,47 +1,64 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <%- include('../partials/head.ejs') %>
 <body>
     <%- include('../partials/header.ejs') %>
 
     <%- include('../partials/banner.ejs') %>
-    <main class="main-index">
-        <section class="best-sellers">
-            <div class="tags">
-                <h4 class="tag-title">Lo mas vendido</h4>
-                <h4 class="ver-mas"><a href="/products">Ver mas...</a></h4>
-            </div>
+
+    
+    <main class="main-shopping">
+        <div class="tags">
+            <h4 class="tag-title">PS4</h4>
+        </div>
+        <section class="best-sellers-shopping">
             <div class="products">
-                <% products.forEach(function(product){ 
-                    let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
-                %>
                 <article>
-                    <a href="/products/<%= `${product.id}` %>"><img src="/img/products/<%= product.image %>" alt=""></a>
+                    <img src="/img/sf.png" alt="">
                     <div class="main-article">
-                        <h4 class="description"><%= product.name %></h4>
-                        <p class="price">$ <%= toThousand(finalPrice) %></p>
+                        <h4 class="description">Street Fighter V</h4>
+                        <p class="price">$ 1,500</p>
                         <div class="rating">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
                         </div>
                     </div>
                 </article>
-                <% }) %>
-            </div>
-        </section>
-        <section class="newest-products">
-            <div class="tags">
-                <h4 class="tag-title">Lo mas nuevo</h4>
-                <h4 class="ver-mas"><a href="/products">Ver mas...</a></h4>
-            </div>
-            <div class="products">
                 <article>
-                    <img src="/img/fc.png" alt="">
+                    <img src="/img/batman.png" alt="">
                     <div class="main-article">
-                        <h4 class="description">Far Cry 6</h4>
+                        <h4 class="description">Batman</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>   
+                <article>
+                    <img src="/img/blood.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Bloodborne</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/cyber.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Cyberpunk</h4>
                         <p class="price">$ 1,200</p>
                         <div class="rating">
                             <span class="fa fa-star checked"></span>
@@ -53,9 +70,146 @@
                     </div>
                 </article>
                 <article>
+                    <img src="/img/item-4.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Watch Dogs</h4>
+                        <p class="price">$ 2,300</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-1.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Battlefield</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="best-sellers-shopping">
+            <div class="products">
+                <article>
+                    <img src="/img/sf.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Street Fighter V</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/batman.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Batman</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>   
+                <article>
+                    <img src="/img/blood.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Bloodborne</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
                     <img src="/img/cyber.png" alt="">
                     <div class="main-article">
                         <h4 class="description">Cyberpunk</h4>
+                        <p class="price">$ 1,200</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-4.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Watch Dogs</h4>
+                        <p class="price">$ 2,300</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/item-1.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Battlefield</h4>
+                        <p class="price">$ 1,500</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="best-sellers-shopping">
+            <div class="tags">
+                <h4 class="tag-title">Tambien te puede interesar</h4>
+            </div>
+            <div class="products">
+                <article>
+                    <img src="/img/item-1.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Battlefield V</h4>
+                        <p class="price">$ 1,200</p>
+                        <div class="rating">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <img src="/img/hori.png" alt="">
+                    <div class="main-article">
+                        <h4 class="description">Horizon</h4>
                         <p class="price">$ 2,300</p>
                         <div class="rating">
                             <span class="fa fa-star checked"></span>
@@ -81,98 +235,6 @@
                     </div>
                 </article>
                 <article>
-                    <img src="/img/hori.png" alt="">
-                    <div class="main-article">
-                        <h4 class="description">Horizon</h4>
-                        <p class="price">$ 1,200</p>
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <img src="/img/lm.png" alt="">
-                    <div class="main-article">
-                        <h4 class="description">Luigi's Mansion</h4>
-                        <p class="price">$ 2,300</p>
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <img src="/img/god.png" alt="">
-                    <div class="main-article">
-                        <h4 class="description">GODFALL</h4>
-                        <p class="price">$ 1,500</p>
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section class="catalogue">
-            <div class="tags">
-                <h4 class="tag-title">Catálogo</h4>
-                <h4 class="ver-mas"><a href="/products">Ver mas...</a></h4>
-            </div>
-            <div class="products">
-                <article>
-                    <img src="/img/item-1.png" alt="">
-                    <div class="main-article">
-                        <h4 class="description">Battlefield V</h4>
-                        <p class="price">$ 1,200</p>
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <img src="/img/item-2.png" alt="">
-                    <div class="main-article">
-                        <h4 class="description">Donkey Kong</h4>
-                        <p class="price">$ 2,300</p>
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <img src="/img/item-3.png" alt="">
-                    <div class="main-article">
-                        <h4 class="description">Super Mario Party</h4>
-                        <p class="price">$ 1,500</p>
-                        <div class="rating">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </article>
-                <article>
                     <img src="/img/ds.png" alt="">
                     <div class="main-article">
                         <h4 class="description">Dark Souls</h4>
@@ -187,9 +249,9 @@
                     </div>
                 </article>
                 <article>
-                    <img src="/img/ow.png" alt="">
+                    <img src="/img/me.png" alt="">
                     <div class="main-article">
-                        <h4 class="description">Overwatch</h4>
+                        <h4 class="description">Mass Effect</h4>
                         <p class="price">$ 2,300</p>
                         <div class="rating">
                             <span class="fa fa-star checked"></span>
@@ -201,9 +263,9 @@
                     </div>
                 </article>
                 <article>
-                    <img src="/img/item-4.png" alt="">
+                    <img src="/img/item-3.png" alt="">
                     <div class="main-article">
-                        <h4 class="description">Watch Dogs</h4>
+                        <h4 class="description">Mario Party</h4>
                         <p class="price">$ 1,500</p>
                         <div class="rating">
                             <span class="fa fa-star checked"></span>
@@ -215,9 +277,10 @@
                     </div>
                 </article>
             </div>
-        </section>
+        </section> 
+        
+        
     </main>
     <%- include('../partials/footer.ejs') %>
-    <script src="/js/product-slider.js"></script>
 </body>
 </html>

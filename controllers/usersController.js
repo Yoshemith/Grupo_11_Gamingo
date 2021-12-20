@@ -74,7 +74,7 @@ const usersControlador = {
                     if(isValidPassword){
                         req.session.usuarioLogeado = userToLogin;
                         if(req.body.recordar){
-                            res.cookie('recordar', req.body.correo, { maxAge: (1000 * 60) * 2}); //seteando cookie 2 minutos
+                            res.cookie('recordar', req.body.correo, { maxAge: (1000 * 60) * 5}); //seteando cookie 10 minutos
                         }
                         return res.redirect('/profile');
                     }

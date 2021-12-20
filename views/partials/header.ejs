@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="login-register">
-            <% if (locals.isLogged) { %>
+            <% if (locals.isLogged) { %> 
                 <li>
                     <div class="dropdown">
                         <button class="dropbtn">
@@ -34,9 +34,9 @@
             </div>
         </div>
         <div class="search-container">
-            <form action="/" method="GET">
+            <form action="/search" method="GET">
                 <div class="search-bar">
-                    <input type="text" placeholder="Buscar...">
+                    <input type="text" name="keywords" placeholder="Buscar...">
                 </div>
                 <div class="search-button">
                     <button type="submit"><i class="fas fa-search"></i></button>
@@ -49,19 +49,19 @@
             <a href="/">INICIO</a>
         </div>
         <div class="link-nav">
-            <a href="/index">SWITCH</a>
+            <a href="/switch">SWITCH</a>
         </div>
         <div class="link-nav">
-            <a href="/index">XBOX ONE</a>
+            <a href="/xboxone">XBOX ONE</a>
         </div>
         <div class="link-nav">
-            <a href="/index">XBOX 360</a>
+            <a href="/xbox360">XBOX 360</a>
         </div>
         <div class="link-nav">
-            <a href="/index">PS5</a>
+            <a href="/ps5">PS5</a>
         </div>
         <div class="link-nav">
-            <a href="/index">PS4</a>
+            <a href="/ps4">PS4</a>
         </div>
     </div>
 </header>
