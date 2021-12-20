@@ -10,6 +10,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 const uploadFile = require('../middlewares/multerMiddleware');
 const validacionRegistro = require('../middlewares/validateRegisterMiddleware');
 const validacionLogin = require('../middlewares/validateLoginMiddleware');
+const validacionUpdateProfile = require('../middlewares/validateUpdateProfileMiddleware');
 
 //REGISTER
 router.get('/register', guestMiddleware, usersController.register);
@@ -18,6 +19,11 @@ router.post('/register', uploadFile.single('imagenUsuario'), validacionRegistro,
 //LOGIN
 router.get('/login', guestMiddleware, usersController.login);
 router.post('/login',validacionLogin, usersController.loginProcess);
+
+//EDITE PROFILE
+router.get('/editProfile', authMiddleware, usersController.profileData);
+router.post('/editProfile',uploadFile.single('imagenUsuario'), validacionUpdateProfile, usersController.updateProfile);
+router.post('/destroyProfile', usersController.destroy);
 
 //CHANGE PASSWORD
 router.get('/changePass', usersController.changePass);

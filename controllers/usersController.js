@@ -104,8 +104,53 @@ const usersControlador = {
         res.clearCookie('recordar');
         req.session.destroy();
         return res.redirect('/');
+    },
+    profileData: (req, res)=>{
+        resultado = req.session.usuarioLogeado;
+        res.render('./users/editProfile');
+    }, 
+    updateProfile: (req, res)=>{
+        resultado = req.session.usuarioLogeado;
+        let isValidPassword = bcrypt.compareSync(req.body.contraseña, resultado.password);
+        if (isValidPassword){
+            if (req.body.contraseñaNueva != ""){
+                let upImage = req.file ? req.file.filename :  'user.png'; 
+                User.update({
+                    firstname: req.body.nombre,
+                    lastname: req.body.apellido,
+                    password: bcrypt.hashSync(req.body.contraseñaNueva, 10),
+                    user_image: upImage,
+                },{
+                    where: {
+                        email: resultado.email
+                    }
+                });
+            }else{
+                let upImage = req.file ? req.file.filename :  'user.png'; 
+                User.update({
+                    firstname: req.body.nombre,
+                    lastname: req.body.apellido,
+                    user_image: upImage,
+                },{
+                    where: {
+                        email: resultado.email
+                    }
+                });
+            }
+            res.render('./users/profile', {
+                user: req.session.usuarioLogeado
+            });
+        }
+    },
+    destroy: (req, res) => {
+        resultado = req.session.usuarioLogeado;
+		User.destroy({
+            where: { 
+                email: resultado.email
+            }
+        })
+        res.redirect('/logout');
     }
-    
 };
 
 module.exports = usersControlador;

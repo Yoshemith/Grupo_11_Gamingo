@@ -154,6 +154,14 @@ header{
     flex-direction: column;
     position: relative;
 }
+.input-form-destroy{
+    width: 60%;
+    font-size: 16px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
 .input-form input{
     height: 30px;
     border-radius: 10px;
@@ -167,6 +175,11 @@ header{
     border-radius: 10px;
     height: 40px;
     margin: 20px 0;
+}
+.input-form-destroy button{
+    background: rgb(131, 0, 0);
+    border-radius: 10px;
+    height: 30px;
 }
 .input-form p{
     font-size: 12px;
