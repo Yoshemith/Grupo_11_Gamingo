@@ -5,9 +5,11 @@
     <%- include('../partials/header.ejs') %>
     <main class="main-profile">
         <br><br>
-        <h3>Hola <%= user.firstname %> <%= user.lastname %></h3>
+        <h1 class="saludo">¡ Hola, <%= user.firstname %> <%= user.lastname %> !</h1>
         <br>
-        <img src="/img/profileImages/<%= user.user_image %>" alt="" srcset="">
+        <div class="image-container">
+             <img src="/img/profileImages/<%= user.user_image %>" alt="" srcset="" class="fotoperfil">
+        </div>
         <br>
         <br>
         <div class="correo">
@@ -16,13 +18,13 @@
         <br><br>
 
         <div class="logout-button">
-            <a href="/editProfile"><button>Editar Perfil</button></a>
+            <a href="/editProfile"> <i class="fas fa-user-edit"></i> Editar</a>
         </div>
 
         <br><br>
 
         <div class="logout-button">
-            <a href="/logout"><button>Log out</button></a>
+            <a href="/logout"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
         </div>
     </main>
 </body>
