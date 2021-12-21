@@ -40,11 +40,13 @@
             </div>
             <button class="button-principal">AGREGAR A CARRITO</button>
             <p style="margin-top: 4px;"></p>
+            <% if (locals.isLogged) { if (locals.userLogged.id_typeUser != 3) {%>
             <a href="/products/<%=resultado.id_product%>/edit" class="link-modificar-a"><button class="button-modificar">MODIFICAR</button></a>
             <p style="margin-top: 4px;"></p>
             <form action="/products/delete/<%= resultado.id_product %>?_method=DELETE" method="POST">
                 <button class="button-eliminar" type="submit">ELIMINAR</button>
             </form>
+            <%}}%>
         </article>
         </section>
 

@@ -23,6 +23,8 @@ router.post('/login',validacionLogin, usersController.loginProcess);
 //EDITE PROFILE
 router.get('/editProfile', authMiddleware, usersController.profileData);
 router.post('/editProfile',uploadFile.single('imagenUsuario'), validacionUpdateProfile, usersController.updateProfile);
+router.get('/editPass', authMiddleware, usersController.viewPass);
+router.post('/editPass', validacionUpdateProfile, usersController.updatePass);
 router.post('/destroyProfile', usersController.destroy);
 
 //CHANGE PASSWORD

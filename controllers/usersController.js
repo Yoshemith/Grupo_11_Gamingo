@@ -111,26 +111,36 @@ const usersControlador = {
     }, 
     updateProfile: (req, res)=>{
         resultado = req.session.usuarioLogeado;
+        if (req.file != undefined){
+            var upImage = req.file.filename;
+        }else{
+            var upImage = resultado.user_image;
+        }
         let isValidPassword = bcrypt.compareSync(req.body.contraseña, resultado.password);
         if (isValidPassword){
-            if (req.body.contraseñaNueva != ""){
-                let upImage = req.file ? req.file.filename :  'user.png'; 
                 User.update({
                     firstname: req.body.nombre,
                     lastname: req.body.apellido,
-                    password: bcrypt.hashSync(req.body.contraseñaNueva, 10),
                     user_image: upImage,
                 },{
                     where: {
                         email: resultado.email
                     }
                 });
-            }else{
-                let upImage = req.file ? req.file.filename :  'user.png'; 
+            res.render('./users/profile', {
+                user: req.session.usuarioLogeado
+            });
+        }
+    },
+    viewPass: (req, res) => {
+        res.render('./users/editPass')
+    },
+    updatePass: (req, res) =>{
+        resultado = req.session.usuarioLogeado;
+        let isValidPassword = bcrypt.compareSync(req.body.contraseña, resultado.password);
+        if (isValidPassword){
                 User.update({
-                    firstname: req.body.nombre,
-                    lastname: req.body.apellido,
-                    user_image: upImage,
+                    password: bcrypt.hashSync(req.body.contraseñaNueva, 10)
                 },{
                     where: {
                         email: resultado.email
@@ -140,7 +150,6 @@ const usersControlador = {
             res.render('./users/profile', {
                 user: req.session.usuarioLogeado
             });
-        }
     },
     destroy: (req, res) => {
         resultado = req.session.usuarioLogeado;
