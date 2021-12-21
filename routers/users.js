@@ -35,4 +35,8 @@ router.get('/dashboard', authMiddleware, usersController.dashboard);
 router.get('/profile', authMiddleware, usersController.profile);
 router.get('/logout', usersController.logout);
 
+//TÉRMINOS Y CONDICIONES Y AVISO DE PRIVACIDAD
+router.get('/terminos', usersController.terminos);
+router.get('/aviso', usersController.aviso);
+
 module.exports = router;

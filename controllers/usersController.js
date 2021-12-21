@@ -159,6 +159,12 @@ const usersControlador = {
             }
         })
         res.redirect('/logout');
+    },
+    terminos: (req, res) => {
+        res.render('./users/terminos');
+    },
+    aviso: (req, res) => {
+        res.render('./users/aviso');
     }
 };
 

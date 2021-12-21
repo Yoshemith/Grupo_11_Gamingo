@@ -44,9 +44,97 @@
 }
 
 .img-container {
-    height: 311px;
+    /*height: 311px;
     width: 1312px;
     position: relative;
     float: left;
+    */
+    position: relative;
+    float: left;
+    max-width: 50%;
+    display: block;
 }
+/*
+@media (max-width: 481px){
+    .slider-frame{
+        display: none;
+    }
+    .slide-images{
+        background-image: url(slidermobile.svg);
+    }
+    
+}
+*/
+@media (max-width: 1024px){
+    .slider-frame{
+    height: 156px;
+    width: 656px;
+    }
+    .img-container {
+        max-width: 33%;
+    }
+
+    @-webkit-keyframes slide_animation {
+        0% {left: 0px;}
+        10% {left: 0px;}
+        20% {left: 656px;}
+        30% {left: 656px;}
+        40% {left: 1312px;}
+        50% {left: 1312px;}
+        60% {left: 656px;}
+        70% {left: 656px;}
+        80% {left: 0px;}
+        90% {left: 0px;}
+        100% {left: 0px;}
+    }
+    .slide-images{
+        width: 1968px;
+        height: 156px;
+        margin: 0 0 0 -1312px;
+        position: relative;
+        -webkit-animation-name: slide_animation;
+        -webkit-animation-duration: 33s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-play-state: running;
+    }
+    
+}
+
+@media (max-width: 481px){
+    .slider-frame{
+    height: 78px;
+    width: 328px;
+    }
+    .img-container {
+        max-width: 33%;
+    }
+
+    @-webkit-keyframes slide_animation {
+        0% {left: 0px;}
+        10% {left: 0px;}
+        20% {left: 328px;}
+        30% {left: 328px;}
+        40% {left: 656px;}
+        50% {left: 656px;}
+        60% {left: 328px;}
+        70% {left: 328px;}
+        80% {left: 0px;}
+        90% {left: 0px;}
+        100% {left: 0px;}
+    }
+    .slide-images{
+        width: 984px;
+        height: 78px;
+        margin: 0 0 0 -656px;
+        position: relative;
+        -webkit-animation-name: slide_animation;
+        -webkit-animation-duration: 33s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-play-state: running;
+    }
+    
+}
+
 
