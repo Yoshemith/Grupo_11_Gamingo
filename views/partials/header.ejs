@@ -18,7 +18,9 @@
                             <i class="fas fa-angle-down"></i>
                         </button>
                         <div class="dropdown-content">
-                        <a href="/dashboard">Dashboard</a>
+                        <% if (locals.userLogged.id_typeUser == 1) {%>
+                        <a href="http://localhost:3000/">Dashboard</a>
+                        <%}%>
                         <a href="/profile">Profile</a>
                         <a href="/logout">Log out</a>
                         </div>

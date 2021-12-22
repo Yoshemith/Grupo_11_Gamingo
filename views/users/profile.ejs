@@ -18,17 +18,25 @@
         <br><br>
 
         <div class="logout-button">
-            <a href="/editProfile"> <i class="fas fa-user-edit"></i> Editar datos personales</a>
+            <a href="/editProfile"> <i class="fas fa-user-edit"></i>  Editar datos personales</a>
         </div>
+        <br><br>
         <div class="logout-button">
-            <a href="/editPass"> <i class="fas fa-user-edit"></i> Cambiar contraseña</a>
+            <a href="/editPass"> <i class="fas fa-user-edit"></i>  Cambiar contraseña</a>
         </div>
-
+        
+        <br><br>
+        <% if (locals.isLogged) { if (locals.userLogged.id_typeUser != 3) {%>
+        <div class="logout-button">
+            <a href="/products/create"> <i class="fas fa-plus-square"></i>  Agregar Producto</a>
+        </div>
+        <%}}%>
         <br><br>
 
         <div class="logout-button">
             <a href="/logout"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a>
         </div>
+        <br><br>
     </main>
 </body>
 </html>

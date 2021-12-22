@@ -33,11 +33,22 @@ app.use(rutasUsers);
 const rutasProducts = require('./routers/products');
 app.use('/products', rutasProducts);
 
+//Aquí llamo a la ruta de las api de Category
+const apiCategoriesRouter = require('./routers/api/categories')
+//Aquí llamo a la ruta de las api de actors
+const apiProductsRouter = require('./routers/api/products')
+//Aquí llamo a la ruta de las api de actors
+const apiUsersRouter = require('./routers/api/users')
+//Aquí creo la colección de mis recursos de Gamingo (APIs)
+app.use('/api/categories',apiCategoriesRouter);
+app.use('/api/products',apiProductsRouter);
+app.use('/api/users',apiUsersRouter);
+
 //Confifiguracion EJS como template engine & Puerto default o 3000
 app.set('view engine', 'ejs');
-let port = process.env.PORT || 3000;
+let port = 3001;//process.env.PORT || 3001;
 
-app.listen(port, () => console.log('Server running at port 3000')); //Levantando el servidor
+app.listen(port, () => console.log('Server running at port 3001')); //Levantando el servidor
 
 app.use((req, res, next) => {
     res.status(404).render('./main/not-found');
