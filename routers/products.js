@@ -5,6 +5,7 @@ const router = express.Router();
 const productsController = require('../controllers/productsController');
 
 //MIDDLEWARES
+const adminMiddleware = require('../middlewares/adminMiddleware');
 const upload = require('../middlewares/PictureProductMiddleware');
 const validationsProduct = require('../middlewares/validateProductMiddleware');
 
@@ -12,14 +13,14 @@ const validationsProduct = require('../middlewares/validateProductMiddleware');
 router.get('/', productsController.index); 
 
 /*** CREATE PRODUCT ***/ 
-router.get('/create', productsController.create); 
+router.get('/create', adminMiddleware, productsController.create); 
 router.post('/', upload.single('productImage'), validationsProduct, productsController.store);  //file missing with d&d evenfileUpload.array
 
 /*** DETAILS PRODUCT ***/ 
 router.get('/:idProduct/', productsController.detail);
 
 /*** EDIT PRODUCT ***/ 
-router.get('/:idProduct/edit', productsController.edit); 
+router.get('/:idProduct/edit', adminMiddleware, productsController.edit); 
 router.put('/:idProduct/edit', upload.single('product-image'), productsController.update); 
 
 /*** DELETE PRODUCT***/ 

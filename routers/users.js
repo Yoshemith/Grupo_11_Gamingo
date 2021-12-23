@@ -20,7 +20,7 @@ router.post('/register', uploadFile.single('imagenUsuario'), validacionRegistro,
 router.get('/login', guestMiddleware, usersController.login);
 router.post('/login',validacionLogin, usersController.loginProcess);
 
-//EDITE PROFILE
+//EDIT PROFILE
 router.get('/editProfile', authMiddleware, usersController.profileData);
 router.post('/editProfile',uploadFile.single('imagenUsuario'), validacionUpdateProfile, usersController.updateProfile);
 router.get('/editPass', authMiddleware, usersController.viewPass);
@@ -35,7 +35,7 @@ router.get('/dashboard', authMiddleware, usersController.dashboard);
 router.get('/profile', authMiddleware, usersController.profile);
 router.get('/logout', usersController.logout);
 
-//TÉRMINOS Y CONDICIONES Y AVISO DE PRIVACIDAD
+//TERMINOS Y CONDICIONES - AVISO DE PRIVACIDAD
 router.get('/terminos', usersController.terminos);
 router.get('/aviso', usersController.aviso);
 
