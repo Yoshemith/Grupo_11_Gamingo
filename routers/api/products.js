@@ -6,6 +6,7 @@ const productsAPIController = require('../../controllers/api/productsAPIControll
 
 //ALL PRODUCTS
 router.get('/', productsAPIController.list); 
-
+//MOST RATED PRODUCT
+router.get('/mostrated', productsAPIController.mostrated); 
 
 module.exports = router;

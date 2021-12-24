@@ -22,7 +22,23 @@ const productsAPIController = {
                 data: producto
             }
                 res.json(respuesta);
-            })
+        })
+    },
+    'mostrated': (req, res) => {
+        Product.findOne({ 
+            raw: true, 
+            where: { id_product: 1 }})
+        .then(producto => {
+            let respuesta = {
+                meta: {
+                    status : 200,
+                    total: producto.length,
+                    url: 'api/products/mostrated'
+                },
+                data: producto
+            }
+                res.json(respuesta);
+        })
     }
 }
 
